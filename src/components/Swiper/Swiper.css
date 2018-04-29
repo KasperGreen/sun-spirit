@@ -1,0 +1,49 @@
+.Swiper {
+  .swiper-container {
+    padding-top: 42px;
+    padding-bottom: 142px;
+  }
+
+  &-button {
+    &-next, &-prev {
+      background: url(images/arrow_right.svg) center center no-repeat;
+      display: block;
+      width: 103px;
+      height: 63px;
+      background-size: contain;
+      border: none;
+      position: absolute;
+      bottom: 42px;
+      z-index: 2;
+    }
+    &-next {
+      right: 20%;
+      @media (max-width: 1024px) {
+        right: 0;
+      }
+    }
+    &-prev {
+      transform: rotate(180deg);
+      left: 20%;
+      @media (max-width: 1024px) {
+        left: 0;
+      }
+    }
+    &-dots {
+      z-index: 2;
+      position: absolute;
+      bottom: 42px !important;
+      left: 50% !important;
+      width: auto !important;
+      transform: translateX(-50%);
+      > * {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        background: white;
+        border-radius: 50%;
+      }
+    }
+  }
+}

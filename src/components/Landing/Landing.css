@@ -1,0 +1,7 @@
+.Landing {
+  &-counter {
+    color: rgb(249, 209, 139);
+    font-size: 32px;
+    text-align: center;
+  }
+}
