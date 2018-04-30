@@ -84,26 +84,26 @@ export default class Player extends Component {
     const {playlist} = this.props
 
     if (!playlist) {
-      return <div className="p2 center">Loading...</div>
+      return <div className="Player-playlist">Loading...</div>
     }
 
     const tracks = playlist.tracks.map((track, i) => {
       return (
         <button
           key={track.id}
-          className={classNames('flex flex-center full-width left-align button button-transparent', {
+          className={classNames('Player-track_button', {
             'is-active': this.props.soundCloudAudio._playlistIndex === i
           })}
           onClick={this.playTrackAtIndex.bind(this, i)}
         >
-          <span className="flex-auto semibold">{track.title}</span>
-          <span className="h6 regular">{Timer.prettyTime(track.duration / 1000)}</span>
+          <span className="">{track.title}</span>
+          <span className="">{Timer.prettyTime(track.duration / 1000)}</span>
         </button>
       )
     })
 
     return (
-      <div>{tracks}</div>
+      <div className='Player-playlist'>{tracks}</div>
     )
   }
 

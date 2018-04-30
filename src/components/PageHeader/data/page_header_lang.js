@@ -15,7 +15,7 @@ export default {
       submenu: [
         {
           title: {[LANG_RU]: 'атмосфера', [LANG_EN]: 'Atmosphere'},
-          to: '/atmomusic'
+          to: '/music/atmosphere'
         },
         {
           title: {[LANG_RU]: 'биосфера', [LANG_EN]: 'Biosphere'},

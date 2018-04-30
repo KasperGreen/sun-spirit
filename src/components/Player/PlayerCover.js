@@ -18,27 +18,31 @@ export default class PlayerCover extends Component {
     return (
       <div className='Player-cover' style={{backgroundImage: `url(${art_image_url})`}}>
         <div className='Player-cover-inner'>
-          <h2 className="Player-cover-artist">{username}</h2>
+          <div>
+            <h2 className="Player-cover-artist">{username}</h2>
+          </div>
           <h1 className='Player-cover-title'>{title}</h1>
-          <div className="flex flex-center">
-            <PrevButton
-              className="flex-none h3 button button-narrow button-transparent button-grow rounded"
-              onPrevClick={this.prevIndex}
-              {...this.props}
-            />
-            <PlayButton
-              className="flex-none h2 button button-transparent button-grow rounded"
-              {...this.props}
-            />
-            <NextButton
-              ref={(element) => {this.next_button = element}}
-              className="flex-none h3 button button-narrow button-transparent button-grow rounded"
-              onNextClick={this.nextIndex}
-              {...this.props}
-            />
+          <div className="Player-buttons-wrapper">
+            <div className='Player-cover-main_buttons'>
+              <PrevButton
+                className="Player-cover-button-prev"
+                onPrevClick={this.prevIndex}
+                {...this.props}
+              />
+              <PlayButton
+                className="Player-cover-button-play"
+                {...this.props}
+              />
+              <NextButton
+                ref={(element) => {this.next_button = element}}
+                className="Player-cover-button-next"
+                onNextClick={this.nextIndex}
+                {...this.props}
+              />
+            </div>
             <VolumeControl
-              className='flex flex-center mr2'
-              buttonClassName="flex-none h4 button button-transparent button-grow rounded"
+              className='Player-cover-volume'
+              buttonClassName="Player-cover-volume-button"
               {...this.props}
             />
             <Progress

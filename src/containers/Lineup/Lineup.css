@@ -26,17 +26,17 @@
         color: white;
         white-space: nowrap;
         &-active {
-          background: rgba(255, 255, 255, 0.93);
+          background: rgba(255, 255, 255, 0.90);
           color: #111;
         }
       }
       &-text {
-        padding: .42em 1.42em;
-        background: rgba(255, 255, 255, 0.88);
+        padding: .42em 1.42em 1.42em;
+        background: rgba(255, 255, 255, 0.8);
       }
     }
   }
   &-player {
-    width: 420px;
+    width: 50vh;
   }
 }
