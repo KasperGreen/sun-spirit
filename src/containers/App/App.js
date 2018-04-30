@@ -11,7 +11,7 @@ import About from 'containers/About'
 import { LANG_RU } from 'constants/LANG'
 import AppContext from 'context/AppContext'
 import Headliners from 'containers/Headliners'
-import Atmosphere from 'containers/Atmosphere'
+import Music from 'containers/Music'
 import ChangeLangSplashScreen from 'components/ChangeLangSplashScreen/ChangeLangSplashScreen'
 
 Moment.globalLocale = 'ru'
@@ -39,7 +39,7 @@ class App extends Component {
               <Route path={'/'} exact component={Main} />
               <Route path={'/about_festival'} exact component={About} />
               <Route path={'/headliners'} exact component={Headliners} />
-              <Route path={'/atmomusic'} exact component={Atmosphere} />
+              <Route path={'/music/:stage?/:artist?'} component={Music} />
             </Switch>
           </div>
         </Router>
