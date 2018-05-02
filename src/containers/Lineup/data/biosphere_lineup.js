@@ -53,7 +53,7 @@ export default [
     "sound_cloud_url": "https://soundcloud.com/cicadasinacacias-cicadasinacacias",
     "image": "/userfile/CA.jpg",
     "title": "ЦИКАДЫ В АКАЦИЯХ",
-    "url_path": "tcikady_v_akatciyakh"
+    "url_path": "cicadas_in_acacias"
   },
   {
     "text": "Steppa Style начал заниматься рагга-джангл и регги/денсхолл музыкой в\n\n2005 году, в 2006 вступил в московскую саундсистему и промогруппу\n\nTrudebwoiz Cartel, в состав которой также входят Kingston, Powet и\n\nMindlab. Они привезли в Москву крупнейших регги/джангл диджеев и мс.\n\n \n\nС самого начала Steppa принимает решение писать лирику на\n\nоригинальном языке - на английском и патуа, чтобы делать свою музыку \n\nинтернациональной. \n\nСотрудничал с такими продюсерами, как: Deekline (Великобритания), Dj Vadim (Великобритания), \n\nDreadsquad (Польша), Psychofreud (Норвегия), Riddim Tuffa\n\n(Великобритания), Dubmatix (Канада), Marcus Visionary (Канада), Krak in Dub( Франция), \n\nMax RubaDub( Швейцария), Benny Page (Великобритания). В 2010 году был признан лучшим\n\nРегги/Денсхолл Артистом России по верчии DHQ. В 2013 году Steppa, Powet\n\nи  талантливый дизайнер Бархан начали делать одежду\n\nGoodvibes. Сочетающую в себе стиль и любовь  к музыке и\n\nкультуре. В 2015 году на волнах радио Мегаполис впервые прозвучала передача Good Vibes  от Steppa Style и Mr Kingston,  собравшая в себе всю палитру музыкальных стилей от регги до грайма. На фестивале Steppa Style выступит с одним из лучших регги-бэндов страны - The Stereodrop.",
