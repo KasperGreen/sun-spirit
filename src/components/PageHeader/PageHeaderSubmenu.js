@@ -8,28 +8,13 @@ export default class PageHeaderSubmenu extends Component {
     opened: false
   }
 
-  subMenuClose = () => {
-    this.setState({opened: false})
-  }
-
-  onClick = (e) => {
-    const {
-      props: {
-        menuClose
-      },
-      subMenuClose
-    } = this
-    menuClose()
-    subMenuClose()
-    e.target.blur()
-  }
-
   render () {
     const {
       props: {
         links,
         title,
-        lang
+        lang,
+        to
       },
       state: {
         opened
@@ -39,7 +24,13 @@ export default class PageHeaderSubmenu extends Component {
     } = this
     return (
       <div>
-        <div onClick={toggleOpen}>{title[lang]}</div>
+        <div onClick={toggleOpen}>
+          {to
+           ?
+           <NavLink {...{to}}>{title[lang]}</NavLink>
+           : title[lang]
+          }
+        </div>
         <ul
           className={
             classNames('PageHeader-submenu',
@@ -61,6 +52,20 @@ export default class PageHeaderSubmenu extends Component {
     )
   }
 
+  onClick = (e) => {
+    const {
+      props: {
+        menuClose
+      },
+      subMenuClose
+    } = this
+    menuClose()
+    subMenuClose()
+    e.target.blur()
+  }
+  subMenuClose = () => {
+    this.setState({opened: false})
+  }
   toggleOpen = () => {
     this.setState({opened: !this.state.opened})
   }

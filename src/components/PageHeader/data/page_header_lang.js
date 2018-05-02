@@ -12,6 +12,7 @@ export default {
     },
     {
       title: {[LANG_RU]: 'музыка', [LANG_EN]: 'Music'},
+      to: '/music',
       submenu: [
         {
           title: {[LANG_RU]: 'атмосфера', [LANG_EN]: 'Atmosphere'},

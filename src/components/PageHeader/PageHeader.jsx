@@ -39,7 +39,7 @@ export default class PageHeader extends Component {
                         return (
                           <li key={key} className='PageHeader-menu-item'>
                             {submenu
-                             ? <PageHeaderSubmenu {...{links: submenu, lang, title, menuClose}} />
+                             ? <PageHeaderSubmenu {...{links: submenu, lang, title, to, menuClose}} />
                              : <NavLink {...{to, onClick: menuClose}}>{title[lang]}</NavLink>
                             }
                           </li>

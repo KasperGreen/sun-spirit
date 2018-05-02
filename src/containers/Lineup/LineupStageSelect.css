@@ -1,9 +1,21 @@
 .LineupStageSelect {
   min-height: calc(100vh - 163px);
+  &-wrapper {
+    padding: 3em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    @media (max-width: 1020px) {
+      display: block;
+    }
+  }
   &-stage {
-    width: 420px;
-    margin: 2em auto;
     max-width: 100%;
+    width: 30%;
+    @media (max-width: 1020px) {
+     width: 100%;
+      margin: 2em 0;
+    }
     border-radius: 12px;
     padding: 24px;
     background-size: cover;
@@ -14,6 +26,7 @@
       padding: 12px;
       background: rgba(255, 255, 255, 0.8);
       border-radius: 6px;
+      color: black;
     }
   }
 }

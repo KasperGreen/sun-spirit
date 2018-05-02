@@ -39,6 +39,7 @@
   }
   &-player {
     width: 50vh;
+    background: rgba(255, 255, 255, 0.96);
    &-wrapper {
      position: sticky;
      top: 63px;
