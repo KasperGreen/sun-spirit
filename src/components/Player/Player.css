@@ -1,7 +1,4 @@
 .Player {
-  position: sticky;
-  top: 63px;
-  overflow: hidden;
   box-shadow: -3px -3px 4px #111111;
   &-playlist {
     max-height: calc(50vh - 63px);

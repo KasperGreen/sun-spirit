@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import Player from 'components/Player/Player'
 import LineupArtist from 'containers/Lineup/LineupArtist'
 import * as stages_data from './data'
+import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
 
 const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
 
@@ -39,16 +40,21 @@ export default class Lineup extends Component {
                </ul>
              </nav>
              <div className='Lineup-player'>
-               {router_artist_url_path
-                ?
-                <Player
-                  key={router_artist_url_path}
-                  clientId={clientId}
-                  resolveUrl={sound_cloud_url}
-                  onReady={() => console.log('track is loaded!')}
-                />
-                : <div>Не выбран исполнитель</div>
-               }
+               <div className='Lineup-player-wrapper'>
+                 {router_artist_url_path
+                  ?
+                  sound_cloud_url
+                  ?
+                  <Player
+                    key={router_artist_url_path}
+                    clientId={clientId}
+                    resolveUrl={sound_cloud_url}
+                    onReady={() => console.log('track is loaded!')}
+                  />
+                  : <LineupNotRepresentedOnSoundCloud />
+                  : <div>Не выбран исполнитель</div>
+                 }
+               </div>
              </div>
            </div>
            : <div>Не выбрана сцена</div>
@@ -68,6 +74,8 @@ export default class Lineup extends Component {
       artist = stages_data[stage].find(artist => artist.url_path === router_artist_url_path)
 
     if (!artist) return false
+
+    if (!artist.sound_cloud_url) return false
 
     const match = artist.sound_cloud_url.match(/soundcloud.com\/(.+?)(\/|$)/)
 

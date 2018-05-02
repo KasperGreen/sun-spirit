@@ -19,7 +19,11 @@ export default {
         },
         {
           title: {[LANG_RU]: 'биосфера', [LANG_EN]: 'Biosphere'},
-          to: '/biosphere'
+          to: '/music/biosphere'
+        },
+        {
+          title: {[LANG_RU]: 'тишина', [LANG_EN]: 'Silent'},
+          to: '/music/silent'
         }
       ]
     },

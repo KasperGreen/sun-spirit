@@ -13,6 +13,7 @@
       padding: 0;
       margin: 0;
       list-style: none;
+      width: 100%;
     }
     &-artist {
       background-size: cover;
@@ -38,5 +39,10 @@
   }
   &-player {
     width: 50vh;
+   &-wrapper {
+     position: sticky;
+     top: 63px;
+     overflow: hidden;
+   }
   }
 }
