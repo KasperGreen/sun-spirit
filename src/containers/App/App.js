@@ -13,6 +13,9 @@ import AppContext from 'context/AppContext'
 import Headliners from 'containers/Headliners'
 import Music from 'containers/Music'
 import ChangeLangSplashScreen from 'components/ChangeLangSplashScreen/ChangeLangSplashScreen'
+import { DETECTED_KEYBOARD_USER_CLASS_NAME } from 'constants/APP'
+import './App.css'
+import _ from 'lodash'
 
 Moment.globalLocale = 'ru'
 
@@ -34,7 +37,7 @@ class App extends Component {
       <AppContext.Provider value={{lang, setLang}}>
         <Router>
           <div className="App">
-            <ChangeLangSplashScreen {...{lang}}/>
+            <ChangeLangSplashScreen {...{lang}} />
             <Switch>
               <Route path={'/'} exact component={Main} />
               <Route path={'/about_festival'} exact component={About} />
@@ -47,12 +50,43 @@ class App extends Component {
     )
   }
 
+  keyboardUserEvent = e => {
+    const keyCode = e.keyCode || e.which
+
+    if (keyCode === 9) {
+      if (typeof window !== 'undefined') {
+        if (!_.get(window, DETECTED_KEYBOARD_USER_CLASS_NAME)) {
+          window[DETECTED_KEYBOARD_USER_CLASS_NAME] = true
+          const htmlRoot = document.getElementsByTagName('html')[0]
+          htmlRoot.classList.add(DETECTED_KEYBOARD_USER_CLASS_NAME)
+        }
+      }
+    }
+  }
+  mouseUserEvent = e => {
+    const is_enter_press_click = e.clientX === 0 && e.clientY === 0
+    if (
+      !is_enter_press_click &&
+      _.get(window, DETECTED_KEYBOARD_USER_CLASS_NAME)
+    ) {
+      window[DETECTED_KEYBOARD_USER_CLASS_NAME] = false
+      document
+        .getElementsByTagName('html')[0]
+        .classList.remove(DETECTED_KEYBOARD_USER_CLASS_NAME)
+    }
+  }
   setLang = (lang) => {
     this.setState(
       {
         ...this.state,
         lang
       })
+  }
+
+  componentDidMount () {
+    document.addEventListener('click', this.mouseUserEvent)
+    document.addEventListener('keydown', this.keyboardUserEvent)
+
   }
 }
 

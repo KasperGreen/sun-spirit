@@ -8,18 +8,34 @@ export default class PageHeaderSubmenu extends Component {
     opened: false
   }
 
+  subMenuClose = () => {
+    this.setState({opened: false})
+  }
+
+  onClick = (e) => {
+    const {
+      props: {
+        menuClose
+      },
+      subMenuClose
+    } = this
+    menuClose()
+    subMenuClose()
+    e.target.blur()
+  }
+
   render () {
     const {
       props: {
         links,
         title,
-        menuClose,
         lang
       },
       state: {
         opened
       },
-      toggleOpen
+      toggleOpen,
+      onClick
     } = this
     return (
       <div>
@@ -33,7 +49,7 @@ export default class PageHeaderSubmenu extends Component {
           {links.map(({to, title}, key) => {
             return (
               <li key={key} className='PageHeader-submenu-item'>
-                <NavLink {...{to, onClick: menuClose}}>
+                <NavLink {...{to, onClick}}>
                   {title[lang]}
                 </NavLink>
               </li>

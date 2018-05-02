@@ -7,6 +7,7 @@ import * as stages_data from './data'
 import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
 import LineupStageInfo from 'containers/Lineup/LineupStageInfo'
 import AppContext from 'context/AppContext'
+import LineupStageSelect from 'containers/Lineup/LineupStageSelect'
 
 const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
 
@@ -64,7 +65,7 @@ export default class Lineup extends Component {
                      </div>
                    </div>
                  </div>
-                 : <div>Не выбрана сцена</div>
+                 : <LineupStageSelect {...{lang}} />
                 }
               </div>
             </div>
@@ -76,12 +77,13 @@ export default class Lineup extends Component {
 
   getSoundCloudUrl = () => {
     const {
-        props: {
-          stage,
-          artist: router_artist_url_path
-        }
-      } = this,
-      artist = stages_data[stage].find(artist => artist.url_path === router_artist_url_path)
+      props: {
+        stage,
+        artist: router_artist_url_path
+      }
+    } = this
+    if (!stage) return false
+    const artist = stages_data[stage].find(artist => artist.url_path === router_artist_url_path)
 
     if (!artist) return false
 
