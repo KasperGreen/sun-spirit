@@ -12,21 +12,7 @@ export default {
     },
     {
       title: {[LANG_RU]: 'музыка', [LANG_EN]: 'Music'},
-      to: '/music',
-      submenu: [
-        {
-          title: {[LANG_RU]: 'атмосфера', [LANG_EN]: 'Atmosphere'},
-          to: '/music/atmosphere'
-        },
-        {
-          title: {[LANG_RU]: 'биосфера', [LANG_EN]: 'Biosphere'},
-          to: '/music/biosphere'
-        },
-        {
-          title: {[LANG_RU]: 'тишина', [LANG_EN]: 'Silent'},
-          to: '/music/silent'
-        }
-      ]
+      to: '/music'
     },
     {
       title: {[LANG_RU]: 'знания', [LANG_EN]: 'Knowledge'},
