@@ -16,6 +16,7 @@ import ChangeLangSplashScreen from 'components/ChangeLangSplashScreen/ChangeLang
 import { DETECTED_KEYBOARD_USER_CLASS_NAME } from 'constants/APP'
 import './App.css'
 import _ from 'lodash'
+import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
 
 Moment.globalLocale = 'ru'
 
@@ -44,6 +45,7 @@ class App extends Component {
               <Route path={'/headliners'} exact component={Headliners} />
               <Route path={'/music/:stage?/:artist?'} component={Music} />
             </Switch>
+            <AppUpdateNotifier />
           </div>
         </Router>
       </AppContext.Provider>
