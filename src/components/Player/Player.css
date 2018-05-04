@@ -3,6 +3,9 @@
   &-playlist {
     max-height: calc(50vh - 63px);
     overflow: auto;
+    @media (--mobile) {
+      max-height: none;
+    }
   }
   &-track_button {
     border: none;
