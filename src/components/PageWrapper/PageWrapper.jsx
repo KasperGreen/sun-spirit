@@ -3,6 +3,10 @@ import PageHeader from 'components/PageHeader'
 import PageFooter from 'components/PageFooter'
 
 export default class PageWrapper extends Component {
+  componentDidMount () {
+    window.scrollTo(0,0)
+  }
+
   render () {
     const {
       props: {
