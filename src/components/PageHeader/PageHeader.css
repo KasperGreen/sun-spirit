@@ -124,6 +124,9 @@
   &-buy_button-wrapper {
     button {
       width: 200px;
+      @media (--mobile) {
+        width: auto;
+      }
       max-width: 100%;
       background: none;
       white-space: nowrap;
