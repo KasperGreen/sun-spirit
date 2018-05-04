@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { NavLink } from 'react-router-dom'
 
-export default class LineupArtist extends Component {
+export default class LineupNavListArtist extends Component {
 
   render () {
     const {
@@ -19,23 +19,23 @@ export default class LineupArtist extends Component {
     } = this
     return (
       <div
-        className={'Lineup-list-artist'}
+        className={'LineupNavList-artist'}
         style={{backgroundImage: 'url(https://www.sunspiritgroup.ru' + image + ')'}}
       >
         <NavLink
           to={url_left_side + url_path}
           activeStyle={{pointerEvents: 'none'}}
           className={classNames(
-            'Lineup-list-artist-title',
+            'LineupNavList-artist-title',
             {
-              'Lineup-list-artist-title-active': active
+              'LineupNavList-artist-title-active': active
             }
           )}
         >
           {title}
         </NavLink>
         {active &&
-        <div className='Lineup-list-artist-text'>
+        <div className='LineupNavList-artist-text'>
           {text}
         </div>
         }

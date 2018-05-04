@@ -1,0 +1,36 @@
+.LineupNavList {
+  background: #111;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+  }
+  &-artist {
+    background-size: cover;
+    &-title {
+      display: block;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.85);
+      padding: .42em 1em;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      white-space: nowrap;
+      &-active {
+        background: rgba(255, 255, 255, 0.90);
+        color: #111;
+      }
+    }
+    &-text {
+      padding: .42em 1.42em 1.42em;
+      background: rgba(255, 255, 255, 0.8);
+    }
+  }
+}

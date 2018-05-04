@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import './Lineup.css'
 import PropTypes from 'prop-types'
 import Player from 'components/Player/Player'
-import LineupArtist from 'containers/Lineup/LineupArtist'
 import * as stages_data from './data'
 import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
 import LineupStageInfo from 'containers/Lineup/LineupStageInfo'
 import AppContext from 'context/AppContext'
 import LineupStageSelect from 'containers/Lineup/LineupStageSelect'
+import LineupNavStages from 'containers/Lineup/LineupNavStages'
+import LineupNavList from 'containers/Lineup/LineupNavList'
 
 const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
 
@@ -27,24 +28,10 @@ export default class Lineup extends Component {
             <div className='Lineup'>
               <div>
                 {stage
-                 ? <div className='Lineup-wrapper container'>
-                   <nav className='Lineup-list'>
-                     <ul>
-                       {stages_data[stage].map((artist, key) => {
-                         return (
-                           <li
-                             key={key}
-                           >
-                             <LineupArtist {...{
-                               ...artist,
-                               url_left_side,
-                               active: artist.url_path === router_artist_url_path
-                             }} />
-                           </li>
-                         )
-                       })}
-                     </ul>
-                   </nav>
+                 ?
+                 <div className='Lineup-wrapper container'>
+                   <LineupNavStages {...{lang}} active_stage_name={stage} />
+                   <LineupNavList key={stage} {...{stage, url_left_side}} active_artist_name={router_artist_url_path}/>
                    <div className='Lineup-player'>
                      <div className='Lineup-player-wrapper'>
                        {router_artist_url_path
@@ -55,6 +42,7 @@ export default class Lineup extends Component {
                           key={router_artist_url_path}
                           clientId={clientId}
                           resolveUrl={sound_cloud_url}
+                          onReady={() => {window.scrollTo(0,0)}}
                         />
                         : <LineupNotRepresentedOnSoundCloud />
                         : <LineupStageInfo>
@@ -89,6 +77,8 @@ export default class Lineup extends Component {
     if (!artist.sound_cloud_url) return false
 
     const match = artist.sound_cloud_url.match(/soundcloud.com\/(.+?)(\/|$)/)
+
+    if(!match) return false
 
     if (typeof match[1] === 'undefined') return false
 

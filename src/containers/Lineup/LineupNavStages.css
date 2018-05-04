@@ -1,0 +1,57 @@
+.LineupNavStages {
+  background: rgba(17, 17, 17, 0.93);
+  width: 4.2rem;
+  position: sticky;
+  height: calc(100vh - 63px);
+  top: 63px;
+  &-li-active {
+    z-index: 2;
+  }
+  &-inner {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 4.2rem;
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: 0% 0%;
+    li {
+      transform: rotateZ(180deg);
+    }
+  }
+  &-link {
+    padding: 0 3.2rem;
+    line-height: 4.2rem;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3.2vh;
+    opacity: .42;
+    color: #111;
+    background: rgba(222, 222, 222, 0.64);
+    text-decoration: none;
+    transition: .22s all ease-out;
+    position: relative;
+    z-index: 1;
+    &:hover, &:focus {
+      color: #111;
+      opacity: .95;
+      text-decoration: none;
+    }
+    &-active {
+      position: relative;
+      box-shadow: 1px 1px 2px rgba(110, 110, 110, 0.56);
+      z-index: 2999;
+      transform: scale(1.1);
+      opacity: 1;
+      background: #fefefe;
+      border-radius: 2px;
+    }
+  }
+}
