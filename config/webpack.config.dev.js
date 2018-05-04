@@ -176,6 +176,9 @@ module.exports = {
                   sourceMap: true,
                   plugins: () => [
                     require('postcss-nested'),
+                    require('postcss-custom-media')(
+                      require('./custom_media.config')
+                    ),
                     require('postcss-flexbugs-fixes'),
                     autoprefixer({
                                    browsers: [
