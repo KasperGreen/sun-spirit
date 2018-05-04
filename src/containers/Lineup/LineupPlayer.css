@@ -1,0 +1,13 @@
+.LineupPlayer {
+  width: 50vh;
+  @media (--mobile) {
+    order: 1;
+    width: 100%;
+  }
+  background: rgba(255, 255, 255, 0.96);
+  &-wrapper {
+    position: sticky;
+    top: 63px;
+    overflow: hidden;
+  }
+}

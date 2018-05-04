@@ -3,7 +3,7 @@ import './LineupNavList.css'
 import PropTypes from 'prop-types'
 import LineupNavListArtist from 'containers/Lineup/LineupNavListArtist'
 import * as stages_data from './data'
-
+import classNames from 'classnames'
 export default class LineupNavList extends Component {
   componentDidMount () {
     window.scrollTo(0,0)
@@ -21,6 +21,12 @@ export default class LineupNavList extends Component {
             return (
               <li
                 key={key}
+                className={classNames(
+                  'LineupNavList-li',
+                  {
+                    'LineupNavList-li-active': artist.url_path === active_artist_name
+                  }
+                )}
               >
                 <LineupNavListArtist {...{
                   ...artist,

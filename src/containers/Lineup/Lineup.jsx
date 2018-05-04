@@ -1,25 +1,18 @@
 import React, { Component } from 'react'
 import './Lineup.css'
 import PropTypes from 'prop-types'
-import Player from 'components/Player/Player'
-import * as stages_data from './data'
-import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
-import LineupStageInfo from 'containers/Lineup/LineupStageInfo'
 import AppContext from 'context/AppContext'
 import LineupStageSelect from 'containers/Lineup/LineupStageSelect'
 import LineupNavStages from 'containers/Lineup/LineupNavStages'
 import LineupNavList from 'containers/Lineup/LineupNavList'
-
-const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
+import LineupPlayer from 'containers/Lineup/LineupPlayer'
 
 export default class Lineup extends Component {
 
   render () {
     const {
         props: {url_left_side, stage, artist: router_artist_url_path},
-        getSoundCloudUrl,
-      } = this,
-      sound_cloud_url = getSoundCloudUrl()
+      } = this
 
     return (
       <AppContext>
@@ -31,26 +24,8 @@ export default class Lineup extends Component {
                  ?
                  <div className='Lineup-wrapper container'>
                    <LineupNavStages {...{lang}} active_stage_name={stage} />
-                   <LineupNavList key={stage} {...{stage, url_left_side}} active_artist_name={router_artist_url_path}/>
-                   <div className='Lineup-player'>
-                     <div className='Lineup-player-wrapper'>
-                       {router_artist_url_path
-                        ?
-                        sound_cloud_url
-                        ?
-                        <Player
-                          key={router_artist_url_path}
-                          clientId={clientId}
-                          resolveUrl={sound_cloud_url}
-                          onReady={() => {window.scrollTo(0,0)}}
-                        />
-                        : <LineupNotRepresentedOnSoundCloud />
-                        : <LineupStageInfo>
-                          {stages_data.info[stage][lang]}
-                        </LineupStageInfo>
-                       }
-                     </div>
-                   </div>
+                   <LineupNavList key={stage} {...{stage, url_left_side}} active_artist_name={router_artist_url_path} />
+                   <LineupPlayer key={router_artist_url_path} {...{lang, router_artist_url_path, stage}} />
                  </div>
                  : <LineupStageSelect {...{lang}} />
                 }
@@ -60,33 +35,6 @@ export default class Lineup extends Component {
         }}
       </AppContext>
     )
-  }
-
-  getSoundCloudUrl = () => {
-    const {
-      props: {
-        stage,
-        artist: router_artist_url_path
-      }
-    } = this
-    if (!stage) return false
-    const artist = stages_data[stage].find(artist => artist.url_path === router_artist_url_path)
-
-    if (!artist) return false
-
-    if (!artist.sound_cloud_url) return false
-
-    const match = artist.sound_cloud_url.match(/soundcloud.com\/(.+?)(\/|$)/)
-
-    if(!match) return false
-
-    if (typeof match[1] === 'undefined') return false
-
-    const sound_cloud_username = match[1]
-
-    const url = 'https://soundcloud.com/' + sound_cloud_username + '/tracks'
-
-    return url
   }
 
   static propTypes = {

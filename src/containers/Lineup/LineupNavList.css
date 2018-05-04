@@ -6,12 +6,27 @@
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  ul,li {
+  @media(--mobile) {
+    order: 2;
+  }
+
+  ul, li {
     padding: 0;
     margin: 0;
     list-style: none;
     width: 100%;
   }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  &-li {
+    order: 1;
+    &-active {
+      order: 0;
+    }
+  }
+
   &-artist {
     background-size: cover;
     &-title {

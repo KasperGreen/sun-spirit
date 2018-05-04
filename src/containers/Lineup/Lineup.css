@@ -5,14 +5,8 @@
     padding: 0;
     box-shadow: 2px 2px 8px #333;
     border-radius: 2px;
-  }
-  &-player {
-    width: 50vh;
-    background: rgba(255, 255, 255, 0.96);
-   &-wrapper {
-     position: sticky;
-     top: 63px;
-     overflow: hidden;
-   }
+    @media (--mobile) {
+      flex-direction: column;
+    }
   }
 }
