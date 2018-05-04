@@ -1,5 +1,31 @@
 .Headliners {
   padding-bottom: 42px;
+  &-slide {
+    &-player_link {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: url(./images/play.svg) center center no-repeat;
+        background-size: contain;
+        opacity: 0;
+        transform: scale(0);
+        transition: all .42s ease-out;
+      }
+      &:hover {
+        &:after {
+          transform: scale(.9);
+          opacity: .9;
+          filter: invert(100%);
+        }
+      }
+    }
+  }
 }
 
 .headliner {
@@ -81,6 +107,8 @@
 }
 
 .h1-img {
+  border: none;
+  display: block;
   width: 72%;
   height: 72%;
   border-radius: 50% 50%;

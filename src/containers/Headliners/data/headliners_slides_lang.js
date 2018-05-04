@@ -34,6 +34,7 @@ export default [
       [LANG_RU]: <div>KALYA SCINTILLA <br />&amp; EVE OLUTION</div>,
       [LANG_EN]: <div>KALYA SCINTILLA <br />&amp; EVE OLUTION</div>,
     },
+    player_url: 'music/atmosphere/kalya-scintilia-and-eve-olution',
     description: {
       [LANG_RU]: <div>
         Сегодня Kalya Scintilla - известный на всех континентах планеты музыкальный проект Австралийского
@@ -50,6 +51,7 @@ export default [
   },
   {
     image: martin,
+    player_url: '/music/atmosphere/martin-nonstatic',
     title: {
       [LANG_RU]: 'MARTIN NONSTATIC',
       [LANG_EN]: 'MARTIN NONSTATIC',
@@ -69,6 +71,7 @@ export default [
   },
   {
     image: merkaba,
+    player_url: '/music/atmosphere/merkaba',
     title: {
       [LANG_RU]: 'MERKABA',
       [LANG_EN]: 'MERKABA',
@@ -88,6 +91,7 @@ export default [
   },
   {
     image: slakbaba,
+    player_url: '/music/atmosphere/slackbaba',
     title: {
       [LANG_RU]: 'SLACKBABA',
       [LANG_EN]: 'SLACKBABA',
@@ -107,6 +111,7 @@ export default [
   },
   {
     image: steppa,
+    player_url: '/music/biosphere/steppa_style',
     title: {
       [LANG_RU]: 'Steppa Style',
       [LANG_EN]: 'Steppa Style',
@@ -126,6 +131,7 @@ export default [
   },
   {
     image: manuy,
+    player_url: '/music/biosphere/kolya_manyu',
     title: {
       [LANG_RU]: 'Коля Маню',
       [LANG_EN]: 'Коля Маню',

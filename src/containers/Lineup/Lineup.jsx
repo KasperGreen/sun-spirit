@@ -55,7 +55,6 @@ export default class Lineup extends Component {
                           key={router_artist_url_path}
                           clientId={clientId}
                           resolveUrl={sound_cloud_url}
-                          onReady={() => console.log('track is loaded!')}
                         />
                         : <LineupNotRepresentedOnSoundCloud />
                         : <LineupStageInfo>

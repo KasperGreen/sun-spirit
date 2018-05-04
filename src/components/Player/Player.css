@@ -95,6 +95,7 @@
       bottom: 24%;
       left: 50%;
       transform: translateX(-50%);
+      white-space: nowrap;
     }
 
     &-title, &-artist {
