@@ -1,0 +1,98 @@
+.NoosphereLessons {
+  &-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 33.333333333%;
+      padding: 10px;
+      @media (--tablet) {
+        width: 50%;
+      }
+      @media (--mobile) {
+        width: 100%;
+      }
+    }
+  }
+  &-lesson {
+    display: block;
+    height: 100%;
+    padding-bottom: 70%;
+    position: relative;
+    background-size: cover;
+    background-position: top center;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(42, 44, 46, 0.87);
+    transition: box-shadow .2s ease-out;
+    &:after {
+      z-index: 1;
+      content: '';
+      position: absolute;
+      top: 0;
+      transition: opacity .32s ease-out;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #2a2c2e;
+      opacity: .42;
+    }
+    &:hover, &:active, &:focus, &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      box-shadow: 4px 4px 16px rgba(42, 44, 46, 0.9);
+      &:after {
+        opacity: 0;
+      }
+    }
+    &-active {
+      padding: 0;
+      box-shadow: 4px 4px 16px rgba(42, 44, 46, 0.9);
+
+    }
+    &-title {
+      z-index: 2;
+      color: #fefefe;
+      position: absolute;
+      top: 100%;
+      transform: translateY(calc(-100% - 20px));
+      left: 0px;
+      width: 80%;
+      background-color: #bbbfcb;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 10px 20px 10px 40px;
+      text-align: right;
+      transition: all .2s ease-out;
+      box-shadow: 2px 2px 4px rgba(127, 127, 127, 0.85);
+
+      .NoosphereLessons-lesson-active & {
+        top: 0;
+        border-radius: 0 0 6px 0;
+        box-shadow: 0 0 0 rgba(127, 127, 127, 0.85);
+        transform: translateY(0);
+      }
+    }
+    &-text {
+      position: relative;
+      z-index: 2;
+      font-size: 14px;
+      overflow: hidden;
+      max-height: 1px;
+      min-height: 0;
+      opacity: 0;
+      transition: opacity .42s ease-out;
+      .NoosphereLessons-lesson-active & {
+        max-height: 1000px;
+        min-height: 100%;
+        opacity: 1;
+        background: rgba(255, 250, 240, 0.8);
+        padding: 80px 1.2em 1.2em;
+        color: black;
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@ import { DETECTED_KEYBOARD_USER_CLASS_NAME } from 'constants/APP'
 import './App.css'
 import _ from 'lodash'
 import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
+import Noosphere from 'containers/Nooshere/Noosphere'
 Moment.globalLocale = 'ru'
 
 class App extends Component {
@@ -42,6 +43,7 @@ class App extends Component {
               <Route path={'/'} exact component={Main} />
               <Route path={'/about_festival'} exact component={About} />
               <Route path={'/headliners'} exact component={Headliners} />
+              <Route path={'/noosphere/:lesson?'} component={Noosphere} />
               <Route path={'/music/:stage?/:artist?'} component={Music} />
             </Switch>
             <AppUpdateNotifier />
