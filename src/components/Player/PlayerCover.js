@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { NextButton, PlayButton, PrevButton, Progress, Timer, VolumeControl } from 'react-soundplayer/components'
+import { Helmet } from 'react-helmet'
 
 export default class PlayerCover extends Component {
   render () {
     const {
         props: {
-          track, currentTime, duration
+          track, currentTime, duration, playing
         }
       } = this,
       {
@@ -17,6 +18,11 @@ export default class PlayerCover extends Component {
 
     return (
       <div className='Player-cover' style={{backgroundImage: `url(${art_image_url})`}}>
+        {(username && title && playing) &&
+        <Helmet>
+          <title>{username} — {title}</title>
+        </Helmet>
+        }
         <div className='Player-cover-inner'>
           <div>
             <h2 className="Player-cover-artist">{username}</h2>

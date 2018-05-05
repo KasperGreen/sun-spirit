@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import './LineupPlayer.css'
 import PropTypes from 'prop-types'
 import Player from 'components/Player/Player'
-import * as stages_data from './data'
+import * as stages_data from './data/lineup_list'
 import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
 import LineupStageInfo from 'containers/Lineup/LineupStageInfo'
-
+import stages from './data/stages_lang'
 const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
 
 export default class LineupPlayer extends Component {
@@ -35,16 +35,12 @@ export default class LineupPlayer extends Component {
            />
            : <LineupNotRepresentedOnSoundCloud />
            : <LineupStageInfo>
-             {stages_data.info[stage][lang]}
+             {stages[stage].description[lang]}
            </LineupStageInfo>
           }
         </div>
       </div>
     )
-  }
-
-  componentDidMount () {
-    window.scrollTo(0, 0)
   }
 
   getSoundCloudUrl = () => {
@@ -72,6 +68,10 @@ export default class LineupPlayer extends Component {
     const url = 'https://soundcloud.com/' + sound_cloud_username + '/tracks'
 
     return url
+  }
+
+  componentDidMount () {
+    window.scrollTo(0, 0)
   }
 
   static propTypes = {

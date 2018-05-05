@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import './LineupStageSelect.css'
-import atmosphere_image from './images/atmosphere.jpg'
-import biosphere_image from './images/biosphere.jpg'
-import silent_image from './images/silent.jpg'
-import { info } from './data'
+import stages from './data/stages_lang'
 import { Link } from 'react-router-dom'
+import _ from 'lodash'
 
 export default class LineupStageSelect extends Component {
   render () {
@@ -17,33 +15,20 @@ export default class LineupStageSelect extends Component {
       <div className='LineupStageSelect'>
         <div className='container'>
           <div className='LineupStageSelect-wrapper'>
-            <Link
-              to='/music/atmosphere'
-              className='LineupStageSelect-stage'
-              style={{backgroundImage: 'url(' + atmosphere_image + ')'}}
-            >
-              <div className='LineupStageSelect-stage-inner'>
-                {info.atmosphere[lang]}
-              </div>
-            </Link>
-            <Link
-              to='/music/biosphere'
-              className='LineupStageSelect-stage'
-              style={{backgroundImage: 'url(' + biosphere_image + ')'}}
-            >
-              <div className='LineupStageSelect-stage-inner'>
-                {info.biosphere[lang]}
-              </div>
-            </Link>
-            <Link
-              to='/music/silent'
-              className='LineupStageSelect-stage'
-              style={{backgroundImage: 'url(' + silent_image + ')'}}
-            >
-              <div className='LineupStageSelect-stage-inner'>
-                {info.silent[lang]}
-              </div>
-            </Link>
+            {_.map(stages, ({image_url, description}, key) => {
+              return (
+                <Link
+                  key={key}
+                  to={'/music/' + key}
+                  className='LineupStageSelect-stage'
+                  style={{backgroundImage: 'url(' + image_url + ')'}}
+                >
+                  <div className='LineupStageSelect-stage-inner'>
+                    {description[lang]}
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </div>
