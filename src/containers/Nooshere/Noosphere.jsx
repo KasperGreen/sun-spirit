@@ -10,6 +10,13 @@ import NoosphereLessons from 'containers/Nooshere/NoosphereLessons'
 
 export default class Noosphere extends Component {
   render () {
+    const {
+      props: {
+        match: {
+          params: {lesson}
+        }
+      }
+    } = this
     return (
 
       <PageWrapper>
@@ -30,7 +37,7 @@ export default class Noosphere extends Component {
                   <h1 className='Noosphere-title'>
                     {text.title[lang]}
                   </h1>
-                  <NoosphereLessons />
+                  <NoosphereLessons {...{active_url_path: lesson}} />
                 </div>
               </div>
             )

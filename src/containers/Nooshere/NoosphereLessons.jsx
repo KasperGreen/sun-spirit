@@ -5,9 +5,12 @@ import NoosphereLessonsLesson from 'containers/Nooshere/NoosphereLessonsLesson'
 
 export default class NoosphereLessons extends Component {
 
-
   render () {
-
+    const {
+      props: {
+        active_url_path
+      }
+    } = this
     return (
       <nav className='NoosphereLessons'>
         <ul className='NoosphereLessons-ul'>
@@ -16,7 +19,7 @@ export default class NoosphereLessons extends Component {
               <li
                 key={key}
               >
-                <NoosphereLessonsLesson {...lesson} />
+                <NoosphereLessonsLesson {...{...lesson, active_url_path}} />
               </li>
             )
           })}

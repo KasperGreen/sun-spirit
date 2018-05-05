@@ -68,6 +68,7 @@
       text-align: right;
       transition: all .2s ease-out;
       box-shadow: 2px 2px 4px rgba(127, 127, 127, 0.85);
+      border-radius: 0 2px 2px 0;
 
       .NoosphereLessons-lesson-active & {
         top: 0;
