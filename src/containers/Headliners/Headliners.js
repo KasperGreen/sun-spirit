@@ -6,6 +6,7 @@ import HeadlinersSlide from 'containers/Headliners/HeadlinersSlide'
 import PageWrapper from 'components/PageWrapper'
 import AppContext from 'context/AppContext'
 import './Headliners.css'
+import { Helmet } from 'react-helmet'
 
 export default class Headliners extends Component {
   render () {
@@ -15,6 +16,11 @@ export default class Headliners extends Component {
           {({lang}) => {
             return (
               <div className="headliner Headliners" id="headliner">
+                <Helmet>
+                  <title>
+                    {text.helmet_title[lang]}
+                  </title>
+                </Helmet>
                 <div className='container'>
                   <div className="section-name">{text.page_title[lang]}</div>
                   <Swiper
