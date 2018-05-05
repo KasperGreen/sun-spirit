@@ -4,6 +4,7 @@ import LandingSVGMenu from 'components/Landing/LandingSVGMenu'
 import LandingCounter from 'components/Landing/LandingCounter'
 import AppContext from 'context/AppContext'
 import text from './data/landing_lang'
+import { Helmet } from 'react-helmet'
 
 export default class Landing extends Component {
 
@@ -13,6 +14,9 @@ export default class Landing extends Component {
         {({lang}) => {
           return (
             <div className="Landing section header">
+              <Helmet>
+                <title>{text.title[lang]}</title>
+              </Helmet>
               <div className="container">
                 <LandingSVGMenu />
                 <div className="dark-orange date-fest">

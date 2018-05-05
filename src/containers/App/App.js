@@ -17,7 +17,6 @@ import { DETECTED_KEYBOARD_USER_CLASS_NAME } from 'constants/APP'
 import './App.css'
 import _ from 'lodash'
 import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
-
 Moment.globalLocale = 'ru'
 
 class App extends Component {
