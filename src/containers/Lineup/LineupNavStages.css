@@ -11,6 +11,7 @@
   top: 63px;
   &-li-active {
     z-index: 2;
+
   }
   &-inner {
     display: flex;
@@ -35,6 +36,16 @@
       @media (--mobile) {
         transform: none;
         flex: 1;
+        &:nth-child(1) {
+          a {
+            transform-origin: left center;
+          }
+        }
+        &:nth-child(3) {
+          a {
+            transform-origin: right center;
+          }
+        }
       }
     }
   }
@@ -49,7 +60,7 @@
     color: #111;
     background: rgba(222, 222, 222, 0.64);
     text-decoration: none;
-    transition: .22s all ease-out;
+    transition: all .12s  ease-out;
     position: relative;
     z-index: 1;
     @media (--mobile) {
