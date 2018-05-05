@@ -20,7 +20,7 @@ export default class LineupNavListArtist extends Component {
     return (
       <div
         className={'LineupNavList-artist'}
-        style={{backgroundImage: 'url(https://www.sunspiritgroup.ru' + image + ')'}}
+        style={{backgroundImage: 'url(' + image + ')'}}
       >
         <NavLink
           to={url_left_side + url_path}
