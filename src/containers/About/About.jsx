@@ -4,6 +4,7 @@ import circle_one2_image from './images/circle_one2.png'
 import PageWrapper from 'components/PageWrapper'
 import AppContext from 'context/AppContext'
 import text from './data/about_fesival_lang'
+import { Helmet } from 'react-helmet'
 
 export default class About extends Component {
   render () {
@@ -13,6 +14,9 @@ export default class About extends Component {
           {({lang}) => {
             return (
               <div className="section description" id="about">
+                <Helmet>
+                  <title>{text.title[lang]}</title>
+                </Helmet>
                 <div className="circle left-svg-circle">
                   <img src={circle_one2_image} alt="SUN SPIRIT" />
                 </div>
