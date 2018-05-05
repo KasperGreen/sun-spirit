@@ -28,11 +28,13 @@
     transform-origin: 0% 0%;
     @media (--mobile) {
       transform: none;
+      width: 100%;
     }
     li {
       transform: rotateZ(180deg);
       @media (--mobile) {
         transform: none;
+        flex: 1;
       }
     }
   }
@@ -50,6 +52,10 @@
     transition: .22s all ease-out;
     position: relative;
     z-index: 1;
+    @media (--mobile) {
+      font-size: 4.2vw;
+      padding: 0 1em;
+    }
     &:hover, &:focus {
       color: #111;
       opacity: .95;

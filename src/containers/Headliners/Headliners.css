@@ -24,6 +24,13 @@
           filter: invert(100%);
         }
       }
+      @media (--mobile) {
+        &:after {
+          transform: scale(.9);
+          opacity: .9;
+          filter: invert(100%);
+        }
+      }
     }
   }
 }
