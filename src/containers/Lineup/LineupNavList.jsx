@@ -12,13 +12,6 @@ export default class LineupNavList extends Component {
     const {
       props: {url_left_side, stage, active_artist_name, lang},
     } = this
-    let text = ''
-    lineup_list[stage].forEach((item) => {
-      const filename = item.image.replace(/^.*\//, '')
-      text += 'import ' + filename.replace(/\..*$/, '').replace('-', '').replace(/^\d+/, '')  + ' from \'../images/artists/' + filename  + '\'\n'
-    })
-    console.log(' → ', text, ' ← text | ')
-
 
     return (
       <nav className='LineupNavList'>
