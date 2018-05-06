@@ -56,7 +56,7 @@
     }
     &-opened {
       @media (max-width: 1020px) {
-        max-height: 100vh;
+        max-height: calc(100vh - 63px);
         overflow-y: auto;
       }
     }
