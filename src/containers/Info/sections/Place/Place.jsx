@@ -23,8 +23,16 @@ export default class Place extends Component {
               </ul>
             </div>
           </div>
-          <div className="cols_image">
-            <img src={image1} alt={'Фотография местности'} /><img src={image2} alt={'Фотография местности'} /><img alt={'Фотография местности'} src={image3} />
+          <div className="InfoSections-flex_images">
+            <div>
+              <img src={image1} alt={'Фотография местности'} />
+            </div>
+            <div>
+              <img src={image2} alt={'Фотография местности'} />
+            </div>
+            <div>
+              <img alt={'Фотография местности'} src={image3} />
+            </div>
           </div>
         </div>
       </div>

@@ -25,10 +25,17 @@ export default class InstallationsAndExhibitions extends Component {
             <p>Здесь художники демонстрируют свое творчество, творят в режиме реального времен,
               показывая публике живой процесс рождения картин.</p></div>
         </div>
-        <div className="img_colinstal">
-          <img src={instalation_image_1} alt={'Foto'} />
-          <img src={instalation_image_2} alt={'Foto'} />
-          <img src={instalation_image_3} alt={'Foto'} />
+        <div className="InfoSections-flex_images">
+          <div>
+            <img src={instalation_image_1} alt={'Foto'} />
+
+          </div>
+          <div>
+            <img src={instalation_image_2} alt={'Foto'} />
+          </div>
+          <div>
+            <img src={instalation_image_3} alt={'Foto'} />
+          </div>
         </div>
       </div>
     )

@@ -10,7 +10,17 @@ import PageTitle from 'components/PageTitle/PageTitle'
 import InfoSections from 'containers/Info/InfoSections'
 
 export default class Info extends Component {
+
   render () {
+    const {
+      props: {
+        match: {
+          params: {
+            section
+          }
+        }
+      }
+    } = this
     return (
       <AppContext>
         {({lang}) => {
@@ -30,7 +40,7 @@ export default class Info extends Component {
                   <PageTitle>
                     {text.title[lang]}
                   </PageTitle>
-                  <InfoSections {...{lang}} />
+                  <InfoSections {...{lang}} active_section_key={section} />
                 </div>
               </div>
             </PageWrapper>

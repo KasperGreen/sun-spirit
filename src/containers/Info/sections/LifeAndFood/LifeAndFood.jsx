@@ -72,10 +72,10 @@ export default class LifeAndFood extends Component {
             <p></p>
           </div>
         </div>
-        <div className="cols_imagepp">
-          <img src={pp1} alt={'Foto'} />
-          <img src={mesto4} alt={'Foto'} />
-          <img src={pp2} alt={'Foto'} />
+        <div className="InfoSections-flex_images">
+          <div><img src={pp1} alt={'Foto'} /></div>
+          <div><img src={mesto4} alt={'Foto'} /></div>
+          <div><img src={pp2} alt={'Foto'} /></div>
         </div>
       </div>
     )

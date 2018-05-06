@@ -13,10 +13,10 @@ export default class CinemaAndTheatre extends Component {
           специфического, но не лишенного смысла, кино. В рамках кинотеатра режиссеры и сценаристы покажут Вам свои
           работы и пригласят к обсуждению идей и смыслов, заложенных в каждой из них, будут проведены курсы по
           актерскому мастерству. </p></div>
-        <div className="cols_imagekino">
-          <img src={cinema1} alt={'Foto'} />
-          <img src={cinema2} alt={'Foto'} />
-          <img src={cinema3} alt={'Foto'} />
+        <div className="InfoSections-flex_images">
+          <div><img src={cinema1} alt={'Foto'} /></div>
+          <div><img src={cinema2} alt={'Foto'} /></div>
+          <div><img src={cinema3} alt={'Foto'} /></div>
         </div>
 
       </div>

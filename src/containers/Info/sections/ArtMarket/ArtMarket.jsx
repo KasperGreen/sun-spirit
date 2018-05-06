@@ -12,9 +12,9 @@ export default class ArtMarket extends Component {
           дают возможность гостям приобрести уникальные вещи собственного дизайнерского производства и уникальные
           декоративные артефакты с разных уголков планеты, которые не найти в обычных магазинах.
           Здесь творят и мастерят, делятся опытом умельцы народных промыслов.</p></div>
-        <div className="cols_imageart">
-          <img src={art_market_1} alt={'Foto'} />
-          <img src={art_market_2} alt={'Foto'} />
+        <div className="InfoSections-flex_images">
+          <div><img src={art_market_1} alt={'Foto'} /></div>
+          <div><img src={art_market_2} alt={'Foto'} /></div>
         </div>
 
       </div>
