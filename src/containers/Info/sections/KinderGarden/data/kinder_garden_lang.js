@@ -40,26 +40,21 @@ export default {
     </div>
   },
   right: {
-    [LANG_RU]: <div>
-
-      <h4>Всегда в нашем пространстве: </h4>
+    [LANG_RU]: <div><h4>Всегда в&nbsp;нашем пространстве: </h4>
       <ul>
         <li>Питьевая вода</li>
         <li>Детская йога</li>
         <li>Творческие мастер-классы</li>
-        <li>Арт-терапия «МАНДАЛА»</li>
+        <li>Арт-терапия &laquo;МАНДАЛА&raquo;</li>
         <li>Игровое пространство</li>
         <li>Музыкальные джемы</li>
-        <li>Уроки кручения пои и хулахупа</li>
+        <li>Уроки кручения пои и&nbsp;хулахупа</li>
         <li>Красочный аквагримм</li>
-        <li>И МУЛЬТИКИ!</li>
+        <li>И&nbsp;МУЛЬТИКИ!</li>
       </ul>
       <p></p>
-      <p><b>Работа площадки с 10.00 &nbsp;до 24.00 по расписанию.</b></p>
-    </div>,
-    [LANG_EN]: <div>
-
-      <h4>Our kids space is providing:</h4>
+      <p><b>Работа площадки с&nbsp;10.00 до&nbsp;24.00 по&nbsp;расписанию.</b></p></div>,
+    [LANG_EN]: <div><h4>Our kids space is&nbsp;providing:</h4>
       <ul>
         <li>Potable water;</li>
         <li>Yoga for kids;</li>
@@ -72,7 +67,6 @@ export default {
         <li>Cartoooons!</li>
       </ul>
       <p></p>
-      <p><b>Работа площадки с 10.00 &nbsp;до 24.00 по расписанию.</b></p>
-    </div>
+      <p><b>Работа площадки с&nbsp;10.00 до&nbsp;24.00 по&nbsp;расписанию.</b></p></div>
   }
 }
