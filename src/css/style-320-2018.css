@@ -25,7 +25,7 @@
     height: 270px;
   }
   .header {
-    background: url('/img/fest2018_top.jpg') center -106px no-repeat #402d41;
+    background: url('../images/fest2018_top.jpg') center -106px no-repeat #402d41;
   }
   .header {
     height: 681px;

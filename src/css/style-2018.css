@@ -130,7 +130,7 @@ a, a:hover {
 
 .header {
   padding-top: 69px;
-  background: url('/img/fest2018_top.jpg') center -6px no-repeat #402d41;
+  background: url('../images/fest2018_top.jpg') center -6px no-repeat #402d41;
   height: 805px;
   box-sizing: border-box;
 }
