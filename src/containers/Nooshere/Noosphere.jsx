@@ -7,6 +7,7 @@ import left_circles from './images/fest2018_request_round_1.svg'
 import right_circles from './images/fest2018_request_round_2.svg'
 import text from './data/noosphere_lang'
 import NoosphereLessons from 'containers/Nooshere/NoosphereLessons'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 export default class Noosphere extends Component {
   render () {
@@ -34,9 +35,9 @@ export default class Noosphere extends Component {
                   <img src={right_circles} alt="SUN SPIRIT forms" />
                 </div>
                 <div className='Noosphere-inner container'>
-                  <h1 className='Noosphere-title'>
+                  <PageTitle>
                     {text.title[lang]}
-                  </h1>
+                  </PageTitle>
                   <NoosphereLessons {...{active_url_path: lesson}} />
                 </div>
               </div>
