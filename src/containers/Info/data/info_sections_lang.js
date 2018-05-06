@@ -17,21 +17,21 @@ export default {
   place: {
     title: {
       [LANG_RU]: 'Место проведения',
-      [LANG_EN]: 'Place'
+      [LANG_EN]: 'Location'
     },
     component: <Place />
   },
   map: {
     title: {
       [LANG_RU]: 'Как добаться',
-      [LANG_EN]: 'Map'
+      [LANG_EN]: 'How to get here…'
     },
     component: <Map />
   },
   life_and_food: {
     title: {
       [LANG_RU]: 'Проживание и питание',
-      [LANG_EN]: 'Life and Food'
+      [LANG_EN]: 'Accomodation and meals '
     },
     component: <LifeAndFood />
   },

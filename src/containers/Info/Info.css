@@ -3,4 +3,8 @@
   background: url(./images/fest2018_zajava.jpg) fixed center center;
   background-size: cover;
 
+  h4 {
+    color: #bda253;
+    font-weight: bold;
+  }
 }
