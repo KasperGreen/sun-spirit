@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-
+import { withRouter } from "react-router-dom";
+@withRouter
 export default class LandingSVGMenu extends Component {
 
   render () {
@@ -232,7 +233,7 @@ export default class LandingSVGMenu extends Component {
             <ellipse
               className="svg-hover"
               ref={this.svg_circles.about}
-              onClick={() => {goToPage('about')}}
+              onClick={() => {goToPage('/info')}}
               transform="matrix(0.9233 0.384 -0.384 0.9233 65.4795 -258.1415)"
               fill="#FFFFFF"
               cx="679.167"
@@ -243,7 +244,7 @@ export default class LandingSVGMenu extends Component {
             <ellipse
               className="svg-hover"
               ref={this.svg_circles.life_festival}
-              onClick={() => {goToPage('life_festival')}}
+              onClick={() => {goToPage('/info')}}
               transform="matrix(0.9233 0.384 -0.384 0.9233 190 -228)"
               fill="#FFFFFF"
               cx={661}
@@ -255,7 +256,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.atmomusic}
-              onClick={() => {goToPage('atmomusic')}}
+              onClick={() => {goToPage('/music/atmosphere')}}
               cx="569.811"
               cy="109.353"
               r="28.738"
@@ -264,7 +265,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.headliner}
-              onClick={() => {goToPage('headliners')}}
+              onClick={() => {goToPage('/headliners')}}
               cx="613.751"
               cy="52.172"
               r="25.846"
@@ -273,7 +274,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.noosphere}
-              onClick={() => {goToPage('noosphere')}}
+              onClick={() => {goToPage('/noosphere')}}
               cx="710.405"
               cy="149.505"
               r="25.846"
@@ -282,7 +283,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.about_festival}
-              onClick={() => {goToPage('about_festival')}}
+              onClick={() => {goToPage('/info')}}
               cx="676.238"
               cy="295.838"
               r="25.846"
@@ -291,7 +292,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.biosphere}
-              onClick={() => {goToPage('biosphere')}}
+              onClick={() => {goToPage('/music/biosphere')}}
               cx="638.061"
               cy="145.686"
               r="28.738"
@@ -300,7 +301,7 @@ export default class LandingSVGMenu extends Component {
               fill="#FFFFFF"
               className="svg-hover"
               ref={this.svg_circles.tishina}
-              onClick={() => {goToPage('tishina')}}
+              onClick={() => {goToPage('/music/silent')}}
               cx="644.122"
               cy="230.853"
               r="28.738"
@@ -339,7 +340,7 @@ export default class LandingSVGMenu extends Component {
     return this
   }
   goToPage = (to) => {
-    console.log(' → ', to, ' ← to | goToPage')
+    this.props.history.push(to)
 
   }
   intervals = {}
