@@ -1,0 +1,11 @@
+.About {
+  &-text {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3.14em 0;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #2a2c2e;
+    .text {
+      text-align: left;
+    }
+  }
+}

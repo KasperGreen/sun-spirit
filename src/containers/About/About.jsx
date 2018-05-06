@@ -5,6 +5,7 @@ import PageWrapper from 'components/PageWrapper'
 import AppContext from 'context/AppContext'
 import text from './data/about_fesival_lang'
 import { Helmet } from 'react-helmet'
+import './About.css'
 
 export default class About extends Component {
   render () {
@@ -24,8 +25,10 @@ export default class About extends Component {
                   <img src={circle_one_image} alt="SUN SPIRIT" />
                 </div>
                 <div className="container">
-                  <div className="text">
-                    {text.about_festival[lang]}
+                  <div className='About-text'>
+                    <div className="text">
+                      {text.about_festival[lang]}
+                    </div>
                   </div>
                 </div>
               </div>
