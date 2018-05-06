@@ -7,19 +7,24 @@ import classNames from 'classnames'
 import AppContext from 'context/AppContext'
 import text from './data/page_header_lang'
 import { LANG_EN, LANG_RU } from 'constants/LANG'
+import BuyTicketCounter from 'components/BuyTicketCounter/BuyTicketCounter'
 
 export default class PageHeader extends Component {
   state = {
-    menu_opened: false
+    menu_opened: false,
+    show_price_rising_notifier: false
   }
 
   render () {
     const {
       state: {
-        menu_opened
+        menu_opened,
+        show_price_rising_notifier
       },
       menuToggle,
-      menuClose
+      menuClose,
+      hideNotifier,
+      showNotifier
     } = this
     return (
       <AppContext.Consumer>
@@ -58,6 +63,7 @@ export default class PageHeader extends Component {
                   </nav>
                   <div className="PageHeader-buy_button-wrapper">
                     <button
+                      onClick={showNotifier}
                       data-tc-event="5a490b1e519f7b001fcadde4"
                       data-tc-token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNTliYTVjMTFkMzUyODYwMDFjZjEyMjg0In0.TLXTeZmoOO_SyChB_gGCPAZASyyYjeM8dHY6dph1TW0"
                     >{text.buy_ticket_button[lang]}
@@ -66,6 +72,9 @@ export default class PageHeader extends Component {
                   <div id="mobile_nav_icon" onClick={menuToggle} />
                 </div>
               </div>
+              {show_price_rising_notifier &&
+              <BuyTicketCounter {...{hideNotifier}} />
+              }
             </header>
           )
         }}
@@ -73,6 +82,14 @@ export default class PageHeader extends Component {
     )
   }
 
+  hideNotifier = () => {
+    this.setState(
+      {
+        ...this.state,
+        show_price_rising_notifier: false
+      }
+    )
+  }
   menuClose = () => {
     this.setState({menu_opened: false})
   }
@@ -87,5 +104,13 @@ export default class PageHeader extends Component {
     } = this
 
     this.setState({menu_opened: !menu_opened})
+  }
+  showNotifier = () => {
+    this.setState(
+      {
+        ...this.state,
+        show_price_rising_notifier: true
+      }
+    )
   }
 }

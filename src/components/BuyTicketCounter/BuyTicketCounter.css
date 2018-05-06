@@ -1,0 +1,23 @@
+.BuyTicketCounter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 4.2;
+  background: #304532;
+  box-shadow: 0 0 6px #020;
+  text-transform: none;
+  text-align: center;
+  font-size: 22px;
+
+  &-hide {
+    border: none;
+    background: none;
+    position:absolute;
+    right: 0;
+    top: 0;
+    padding: 0 2em;
+    &:hover {
+       color: #EE0;
+    }
+  }
+}

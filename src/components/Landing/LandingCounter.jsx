@@ -33,5 +33,5 @@ export default class LandingCounter extends Component {
   }
 
   festival_end_date = new Date(2018, 5, 13, -1).getTime()
-  festival_start_date = new Date(2018, 5, 9).getTime()
+  festival_start_date = new Date(2018, 5, 9, 18).getTime()
 }
