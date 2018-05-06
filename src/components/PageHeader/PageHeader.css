@@ -1,13 +1,13 @@
-  .PageHeader {
+.PageHeader {
   background: black;
   text-transform: uppercase;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 0 4px #000;
-    a {
-      display: block;
-    }
+  a {
+    display: block;
+  }
   > *, a, a:hover, a:focus {
     color: #fff;
     font-size: 18px;
@@ -70,7 +70,7 @@
       position: relative;
       background: none;
       border: none;
-      &:hover, &:focus , &:focus-within {
+      &:hover, &:focus, &:focus-within {
         background: #383a3d;
         .PageHeader-submenu {
           box-shadow: 0 2px 8px black;
@@ -120,13 +120,14 @@
       width: 80px;
       height: 63px;
     }
+
+    @media (max-width: 292px) {
+      display: none;
+    }
   }
   &-buy_button-wrapper {
     button {
       width: 200px;
-      @media (--mobile) {
-        width: auto;
-      }
       max-width: 100%;
       background: none;
       white-space: nowrap;
@@ -138,6 +139,15 @@
       border-radius: 5px;
       text-align: center;
       text-transform: uppercase;
+      @media (--mobile) {
+        width: auto;
+      }
+      @media (max-width: 380px) {
+        height: auto !important;
+        line-height: 20px !important;
+        padding: 0 6px !important;
+        font-size: 12px !important;
+      }
     }
   }
 }
