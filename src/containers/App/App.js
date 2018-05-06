@@ -24,7 +24,7 @@ Moment.globalLocale = 'ru'
 class App extends Component {
 
   state = {
-    lang: LANG_RU
+    lang: window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : LANG_RU
   }
 
   render () {
@@ -86,6 +86,8 @@ class App extends Component {
         ...this.state,
         lang
       })
+
+    window.localStorage.setItem('lang', lang)
   }
 
   componentDidMount () {
