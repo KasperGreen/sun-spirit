@@ -5,6 +5,7 @@ import sections from './data/info_sections_lang'
 import _ from 'lodash'
 import { NavLink } from 'react-router-dom'
 import classNames from 'classnames'
+import { Helmet } from 'react-helmet'
 
 export default class InfoSections extends Component {
   render () {
@@ -21,15 +22,20 @@ export default class InfoSections extends Component {
           {active_section_key &&
           <h3 className='InfoSections-title'>
             {sections[active_section_key].title[lang]}
+            <Helmet>
+              <title>{sections[active_section_key].title[lang]}</title>
+            </Helmet>
           </h3>
           }
           <nav className='InfoSections-nav'>
-            <ul className={classNames(
-              'InfoSections-list',
-              {
-                'InfoSections-list-without_main': !active_section_key
-              }
-            )}>
+            <ul
+              className={classNames(
+                'InfoSections-list',
+                {
+                  'InfoSections-list-without_main': !active_section_key
+                }
+              )}
+            >
               {_.map(sections, ({title}, key) => {
                 return (
                   <li
