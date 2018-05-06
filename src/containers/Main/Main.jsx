@@ -6,7 +6,7 @@ export default class Main extends Component {
 
   render () {
     return (
-      <PageWrapper footer_style={{background: '#402D41'}}>
+      <PageWrapper footer_style={{background: '#402D41', boxShadow: 'none'}}>
         <MainLanding />
       </PageWrapper>
     )

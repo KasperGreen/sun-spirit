@@ -24,7 +24,7 @@ export default {
     },
     {
       title: {[LANG_RU]: 'Информация', [LANG_EN]: 'Information'},
-      to: '/life_festival'
+      to: '/info'
     },
   ]
 

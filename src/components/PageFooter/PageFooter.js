@@ -4,6 +4,7 @@ import logo_grey from 'images/logo_grey.svg'
 import icon_fb from 'images/Icon_FB.svg'
 import icon_vk from 'images/Icon_VK.svg'
 import text from './data/page_footer_lang'
+import './PageFooter.css'
 
 export default class PageFooter extends Component {
   render () {
@@ -16,7 +17,7 @@ export default class PageFooter extends Component {
       <AppContext.Consumer>
         {({lang}) => {
           return (
-            <footer className="section footer" style={footer_style}>
+            <footer className="section footer PageFooter" style={footer_style}>
               <div className="container">
                 <div className="footer-container">
                   <div className="logo">
