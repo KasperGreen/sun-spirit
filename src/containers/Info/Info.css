@@ -1,0 +1,5 @@
+.Info {
+  min-height: calc(100vh - 63px);
+  background: url(./images/fest2018_zajava.jpg) fixed center center;
+  background-size: cover;
+}
