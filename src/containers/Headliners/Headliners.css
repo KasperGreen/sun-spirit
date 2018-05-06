@@ -99,13 +99,22 @@
 
 .h1-text {
   font-size: 15px;
-  color: #fff;
   z-index: 2;
-  text-align: justify;
+  text-align: left;
+  background: rgba(248, 244, 230, 0.92);
+  color: #111;
+  margin: 0 12px;
+  line-height: 1.42em;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px #101010;
+  padding: 1.2em;
+  @media(--tablet) {
+    padding: 12px;
+  }
 }
 
-.h1-title, .h1-text {
-  padding: 20px 15px 10px 15px;
+.h1-title {
+  padding: 20px 15px 15px 15px;
   line-height: 1.2;
 }
 
@@ -132,7 +141,7 @@
 
 @media (max-width: 1020px) {
   .h1-title, .h1-text {
-    padding: 20px 10px 10px 10px;
+    padding: 12px;
   }
 
 }

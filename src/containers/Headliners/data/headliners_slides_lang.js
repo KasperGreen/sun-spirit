@@ -10,25 +10,6 @@ import { LANG_EN, LANG_RU } from 'constants/LANG'
 
 export default [
   {
-    image: inna,
-    title: {
-      [LANG_RU]: 'Инна Желанная',
-      [LANG_EN]: 'Inna Zhelannaya',
-    },
-    description: {
-      [LANG_RU]: <div>
-        Создатель легендарной группы "Farlanders", чья музыка явилась сочетанием элементов рока, джаза и
-        разнообразных этно традиций. Группа успешно выступила на крупнейшем в мире форуме этнической музыки
-        WOMEX в Стокгольме в 1998 году. Новый состав группы Инны Желанной: басист Сергей "Grebstel" Калачев,
-        саксофонист Олег Маряхин, барабанщик Дмитрий Фролов. Музыка группы - это потрясающая смесь рока,
-        этники, электроники, джаза.
-      </div>,
-      [LANG_EN]: <div>
-        Английский нужен текст
-      </div>
-    }
-  },
-  {
     image: kalya,
     title: {
       [LANG_RU]: <div>KALYA SCINTILLA <br />&amp; EVE OLUTION</div>,
@@ -45,7 +26,10 @@ export default [
         выражения бытия.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        Kalya Scintilla is an all-continent well-known music project by an Australian producer that is growing popular
+        and performing at big festivals of the USA and Europe. In 2012 a creative union of Kalya Scintilla and Eve
+        Olution (an American theatre artist) is born. Their collaboration is conveying pure life harmony and archetypal
+        expression of being by means of music and drama.
       </div>
     }
   },
@@ -65,7 +49,10 @@ export default [
         Ultimae и Sub.spiele.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        Martin Nonstatic (Ultimae rec.) started working with sound engineering at the age of 18, experimenting with
+        different instruments and surrounding sounds. Quite some time he was engaged in work at live performances of
+        different events and tracks creating. In 2009 Martin devoted himself to studio work. Since then his music’s been
+        supported by different labels like Bine Music, Silent Season, Dewtone, Ultimae and Sub.spiele.
       </div>
     }
   },
@@ -85,7 +72,10 @@ export default [
         духа, скрытого в нашей клеточной памяти, и к бесконечной силе во всех нас.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        This Australian project started in 2009 on Zenon rec. label, later on turned into a separate world-famous
+        Merkaba music label. The label releases loads of music projects. Unique and organic sound of Merkaba project
+        calls you to evoke a lost ancient tribe spirit, hidden in our cellular memory and to the endless power inside
+        all of us.
       </div>
     }
   },
@@ -105,7 +95,10 @@ export default [
         путешествия.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        Slackbaba's created a catalogue of timeless tracks and keeps on impressing world audience with his unique
+        combination of sound styles and genre melody curve. After release of his fourth studio album “Reflections”
+        Slackbaba gave us tons of fresh and long-awaited music in 2018 and now is marking the final chapter of his
+        unique music journey story.
       </div>
     }
   },
@@ -125,7 +118,10 @@ export default [
         одним из лучших регги-бэндов страны - The Stereodrop.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        Steppa Style got engaged in ragga jungle and reggae/dancehall music in 2005. In 2010 he was considered the top
+        reggae/dancehall artist of Russia according to DHQ. In 2015 Steppa Style and Mr Kingston released the first
+        broadcast Good Vibes on Megapolis radiostation. Steppa Style will perform at the festival together with The
+        stereodrop, one of the best Russian reggae bands.
       </div>
     }
   },
@@ -134,7 +130,7 @@ export default [
     player_url: '/music/biosphere/kolya_manyu',
     title: {
       [LANG_RU]: 'Коля Маню',
-      [LANG_EN]: 'Коля Маню',
+      [LANG_EN]: 'Kolya Manyu',
     },
     description: {
       [LANG_RU]: <div>
@@ -144,7 +140,34 @@ export default [
         его песни. Он несёт людям правильные мысли и люди любят его за это.
       </div>,
       [LANG_EN]: <div>
-        Английский нужен текст
+        Kolya Manyu is definetely one of the most actual modern reggae artists. You are going to love his music if you
+        are keen on reggae, dancehall, raggamuffin and hip-hop. When listening to Kolya Manyu’s tracks you forget he is
+        from Tolyatti, his songs are so steeped in authentic Jamaican sunny spirit. He is conveying the right message
+        and people love him for that.
+      </div>
+    }
+  },
+  {
+    image: inna,
+    title: {
+      [LANG_RU]: 'Инна Желанная',
+      [LANG_EN]: 'Inna Zhelannaya',
+    },
+    description: {
+      [LANG_RU]: <div>
+        Создатель легендарной группы "Farlanders", чья музыка явилась сочетанием элементов рока, джаза и
+        разнообразных этно традиций. Группа успешно выступила на крупнейшем в мире форуме этнической музыки
+        WOMEX в Стокгольме в 1998 году. Новый состав группы Инны Желанной: басист Сергей "Grebstel" Калачев,
+        саксофонист Олег Маряхин, барабанщик Дмитрий Фролов. Музыка группы - это потрясающая смесь рока,
+        этники, электроники, джаза.
+      </div>,
+      [LANG_EN]: <div>
+        The creator of legendary “Farlanders”, which music is a fusion of rock, jazz elements and different ethno
+        traditions. In 1998 the band performed successfully at WOMEX, the biggest world forum of ethno music in
+        Stockholm. The new line-up of Inna Zhelannaya’s band consists of Sergey “Grebstel” Kalachyov (bass), Oleg
+        Maryakhin (saxophone), Dmitry Frolov (drums). The band’s music is made up of a thrilling mix of rock, ethno,
+        electro and jazz.
+
       </div>
     }
   }
