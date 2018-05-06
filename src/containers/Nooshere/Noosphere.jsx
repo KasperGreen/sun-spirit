@@ -47,4 +47,17 @@ export default class Noosphere extends Component {
 
     )
   }
+
+  componentWillMount () {
+    const {
+      props: {
+        match: {
+          params: {lesson}
+        }
+      }
+    } = this
+    if (!lesson) {
+      window.scrollTo(0, 0)
+    }
+  }
 }

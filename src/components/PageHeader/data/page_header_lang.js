@@ -16,23 +16,14 @@ export default {
     },
     {
       title: {[LANG_RU]: 'знания', [LANG_EN]: 'Knowledge'},
-      submenu: [
-        {
-          title: {[LANG_RU]: 'ноосфера', [LANG_EN]: 'Noosphere '},
-          to: '/noosphere'
-        },
-        {
-          title: {[LANG_RU]: 'тишина', [LANG_EN]: 'Silent'},
-          to: '/tishina'
-        }
-      ]
+      to: '/noosphere'
     },
     {
       title: {[LANG_RU]: 'О фестивале', [LANG_EN]: 'About Festival'},
       to: '/about_festival'
     },
     {
-      title: {[LANG_RU]: 'жизнь фестиваля', [LANG_EN]: 'Life Festival'},
+      title: {[LANG_RU]: 'Информация', [LANG_EN]: 'Information'},
       to: '/life_festival'
     },
   ]
