@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import sections from './data/info_sections_lang'
 import _ from 'lodash'
 import { NavLink } from 'react-router-dom'
+import classNames from 'classnames'
 
 export default class InfoSections extends Component {
   render () {
@@ -11,19 +12,39 @@ export default class InfoSections extends Component {
       props: {
         lang,
         active_section_key
-      }
+      },
+      scrollToContainer
     } = this
     return (
-      <div className='InfoSections'>
+      <div className='InfoSections' ref={this.element}>
         <div className='InfoSections-inner'>
-          <nav  className='InfoSections-nav'>
-            <ul className='InfoSections-list'>
+          {active_section_key &&
+          <h3 className='InfoSections-title'>
+            {sections[active_section_key].title[lang]}
+          </h3>
+          }
+          <nav className='InfoSections-nav'>
+            <ul className={classNames(
+              'InfoSections-list',
+              {
+                'InfoSections-list-without_main': !active_section_key
+              }
+            )}>
               {_.map(sections, ({title}, key) => {
                 return (
-                  <li key={key}>
+                  <li
+                    key={key} className={classNames(
+                    'InfoSections-nav-li',
+                    {
+                      'InfoSections-nav-li-active': key === active_section_key
+                    }
+                  )}
+                  >
                     <NavLink
+                      onClick={scrollToContainer}
                       activeClassName='InfoSections-nav-link-active'
-                             className='InfoSections-nav-link' to={'/info/' + key}>{title[lang]}</NavLink>
+                      className='InfoSections-nav-link' to={'/info/' + key}
+                    >{title[lang]}</NavLink>
                   </li>
                 )
               })}
@@ -39,6 +60,15 @@ export default class InfoSections extends Component {
     )
   }
 
+  element = React.createRef()
+  scrollToContainer = () => {
+    const link = this.element.current
+
+    setTimeout(() => {
+      let {top} = link.getBoundingClientRect()
+      window.scrollTo(0, window.scrollY + top - 100)
+    }, 200)
+  }
   static propTypes = {
     lang: PropTypes.string.isRequired,
     active_section_key: PropTypes.string,
