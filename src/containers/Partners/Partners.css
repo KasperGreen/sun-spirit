@@ -1,0 +1,14 @@
+.Partners {
+  &-image {
+    max-width: 100%;
+    &-wrapper {
+      height: 150px;
+      background: center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #8b8a8a;
+  }
+}
