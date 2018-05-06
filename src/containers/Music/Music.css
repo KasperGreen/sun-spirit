@@ -1,6 +1,7 @@
 .Music {
   background: url(./images/fonvcontacts.png) center center fixed no-repeat;
   background-size: cover;
+  min-height: calc(100vh - 63px);
   &-circle {
     &-wrapper {
       width: 100%;

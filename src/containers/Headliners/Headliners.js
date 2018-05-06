@@ -7,6 +7,7 @@ import PageWrapper from 'components/PageWrapper'
 import AppContext from 'context/AppContext'
 import './Headliners.css'
 import { Helmet } from 'react-helmet'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 export default class Headliners extends Component {
   render () {
@@ -22,7 +23,9 @@ export default class Headliners extends Component {
                   </title>
                 </Helmet>
                 <div className='container'>
-                  <div className="section-name">{text.page_title[lang]}</div>
+                  <PageTitle>
+                    {text.page_title[lang]}
+                  </PageTitle>
                   <Swiper
                     slides={slides.map((slide, key) => {
                       return (<HeadlinersSlide key={key} {...{slide, lang}} />)

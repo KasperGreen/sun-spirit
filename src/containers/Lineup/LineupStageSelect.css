@@ -1,7 +1,7 @@
 .LineupStageSelect {
   min-height: calc(100vh - 163px);
   &-wrapper {
-    padding: 3em 0;
+    padding: 0 0 3em 0;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
