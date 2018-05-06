@@ -4,6 +4,29 @@ import Lineup from 'containers/Lineup'
 import PageWrapper from 'components/PageWrapper'
 import circle_image from './images/circle_one2.png'
 export default class Music extends Component {
+
+  componentWillMount () {
+    const {
+      props: {
+        match: {
+          params: {stage}
+        }
+      }
+    } = this
+    if(!stage) window.scrollTo(0,0)
+  }
+
+  componentDidUpdate (prevProps, prevState, prevContext) {
+    const {
+      props: {
+        match: {
+          params: {stage}
+        }
+      }
+    } = this
+    if(!stage) window.scrollTo(0,0)
+  }
+
   render () {
     const {
       props: {
