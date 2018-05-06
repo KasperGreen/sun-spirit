@@ -50,6 +50,8 @@ export default class AppUpdateNotifier extends Component {
   }
 
   _registerServiceWorkerOnUpdate = () => {
+    if(typeof navigator.serviceWorker === 'undefined') return this
+
     navigator.serviceWorker.ready.then((sw) => {
       sw.active.onstatechange = () => {
         window.isUpdateAvailable.then(is_updated => {

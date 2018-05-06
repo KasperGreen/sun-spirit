@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import './ApplicationForParticipation.css'
+import { LANG_EN } from 'constants/LANG'
 
 export default class ApplicationForParticipation extends Component {
   render () {
+    const {
+      props: {
+        lang
+      }
+    } = this
     return (
       <div className='ApplicationForParticipation'>
+        {lang === LANG_EN && 'Sorry, only Russian text.'}
         <div className="hrefs"><p><a
           href="https://docs.google.com/forms/d/e/1FAIpQLSeNxXJ3owjG0jvHXFONzT-qv7KUGY6ZN9MB9IOjcVDc3KWayg/viewform"
           target="_blank"
