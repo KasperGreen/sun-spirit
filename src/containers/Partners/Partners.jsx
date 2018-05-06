@@ -21,9 +21,13 @@ export default class Partners extends Component {
                     return (
                       <div
                         key={key}
-                        className='Partners-image-wrapper'
-                        style={{backgroundImage: 'url(' + image_url + ')'}}
-                      />
+                      >
+                        {key === 0 && <div className='Partners-supported_by'>При поддержке</div>}
+                        <div
+                          className='Partners-image-wrapper'
+                          style={{backgroundImage: 'url(' + image_url + ')'}}
+                        />
+                      </div>
                     )
                   })}
                 />
