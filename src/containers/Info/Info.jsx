@@ -7,6 +7,7 @@ import circle_one2_image from './images/circle_one2.png'
 import text from './data/info_lang'
 import { Helmet } from 'react-helmet'
 import PageTitle from 'components/PageTitle/PageTitle'
+import InfoSections from 'containers/Info/InfoSections'
 
 export default class Info extends Component {
   render () {
@@ -29,6 +30,7 @@ export default class Info extends Component {
                   <PageTitle>
                     {text.title[lang]}
                   </PageTitle>
+                  <InfoSections {...{lang}} />
                 </div>
               </div>
             </PageWrapper>
