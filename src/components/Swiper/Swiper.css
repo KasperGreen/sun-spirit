@@ -1,7 +1,6 @@
 .Swiper {
   .swiper-container {
-    padding-top: 42px;
-    padding-bottom: 142px;
+    padding-bottom: 132px;
   }
 
   &-button {
