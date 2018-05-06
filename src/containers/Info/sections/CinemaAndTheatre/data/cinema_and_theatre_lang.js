@@ -4,17 +4,19 @@ import React from 'react'
 export default {
   top: {
     [LANG_RU]: <div>
-      <p>Кинотеатр – уникальное пространство интеллектуального и неформатного, местами
-        специфического, но не лишенного смысла, кино. В рамках кинотеатра режиссеры и сценаристы покажут Вам свои
-        работы и пригласят к обсуждению идей и смыслов, заложенных в каждой из них, будут проведены курсы по
-        актерскому мастерству. </p>
+      <p>Кинотеатр&nbsp;&mdash; уникальное пространство интеллектуального и&nbsp;неформатного, местами
+        специфического, но&nbsp;не&nbsp;лишенного смысла, кино. В&nbsp;рамках кинотеатра режиссеры и&nbsp;сценаристы
+        покажут Вам свои
+        работы и&nbsp;пригласят к&nbsp;обсуждению идей и&nbsp;смыслов, заложенных в&nbsp;каждой из&nbsp;них, будут
+        проведены курсы по
+        актерскому мастерству.</p>
     </div>,
     [LANG_EN]: <div>
-      <p>
-        Cinema is a special space with intellectual and extraordinary, at times odd, but making sense films. Withing the
-        framework of the festival directors and screenwriters will show you their artwork and encourage you to discuss
-        ideas and message of the films. There will also be drama courses held.
-      </p>
+      <p>Cinema is&nbsp;a&nbsp;special space with intellectual and extraordinary, at&nbsp;times odd, but making sense
+        films. Withing the
+        framework of&nbsp;the festival directors and screenwriters will show you their artwork and encourage you
+        to&nbsp;discuss
+        ideas and message of&nbsp;the films. There will also be&nbsp;drama courses held.</p>
     </div>
   }
 }
