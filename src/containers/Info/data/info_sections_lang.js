@@ -38,7 +38,7 @@ export default {
   info_center: {
     title: {
       [LANG_RU]: 'Инфоцентр',
-      [LANG_EN]: 'InfoCenter'
+      [LANG_EN]: 'INFO center'
     },
     component: <InfoCenter />
   },
