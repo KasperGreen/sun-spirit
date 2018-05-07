@@ -1,10 +1,15 @@
 .About {
+  padding-bottom: 4.2em;
   &-text {
     background: rgba(255, 255, 255, 0.95);
-    padding: 3.14em 0;
+    padding: 3.14em;
     border-radius: 4px;
     box-shadow: 0 0 2px #2a2c2e;
-    .text {
+    max-width: 42em;
+    margin: 0 auto;
+    &-inner {
+      font-size: 18px;
+      line-height: 1.5;
       text-align: left;
     }
   }

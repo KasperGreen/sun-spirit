@@ -6,6 +6,7 @@ import AppContext from 'context/AppContext'
 import text from './data/about_fesival_lang'
 import { Helmet } from 'react-helmet'
 import './About.css'
+import PageTitle from 'components/PageTitle/PageTitle'
 
 export default class About extends Component {
   render () {
@@ -14,10 +15,11 @@ export default class About extends Component {
         <AppContext>
           {({lang}) => {
             return (
-              <div className="section description" id="about">
+              <section className='About'>
                 <Helmet>
                   <title>{text.title[lang]}</title>
                 </Helmet>
+                <PageTitle black>{text.title[lang]}</PageTitle>
                 <div className="circle left-svg-circle">
                   <img src={circle_one2_image} alt="SUN SPIRIT" />
                 </div>
@@ -26,12 +28,12 @@ export default class About extends Component {
                 </div>
                 <div className="container">
                   <div className='About-text'>
-                    <div className="text">
+                    <article className="About-text-inner">
                       {text.about_festival[lang]}
-                    </div>
+                    </article>
                   </div>
                 </div>
-              </div>
+              </section>
             )
           }}
         </AppContext>

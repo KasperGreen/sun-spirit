@@ -38,7 +38,9 @@ export default class LineupNavListArtist extends Component {
         </NavLink>
         {active &&
         <div className='LineupNavList-artist-text'>
-          {text}
+          <div className='LineupNavList-artist-text-inner'>
+            {text}
+          </div>
 
           {sound_cloud_url &&
           <div className='LineupNavList-artist-sound_cloud'>

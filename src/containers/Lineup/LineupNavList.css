@@ -50,13 +50,11 @@
       color: white;
       text-decoration: none !important;
       white-space: nowrap;
-      &:hover, &:focus {
+      &:hover, &:focus, &-active {
         color: white;
         background: rgba(19, 48, 17, 0.85);
       }
       &-active {
-        background: rgba(255, 255, 255, 0.90);
-        color: #111;
         + div {
           min-height: 50vh;
         }
@@ -68,11 +66,15 @@
       }
     }
     &-text {
-      padding: .42em 1.42em  5em 1.42em;
+      padding: 1.42em 1.42em  5em 1.42em;
       background: rgba(255, 255, 255, 0.95);
       position: relative;
       opacity: 1;
-      transition: .82s ease-out;
+      transition: .64s ease-out;
+      &-inner {
+        margin: 0 auto;
+        max-width: 32em;
+      }
     }
     &-sound_cloud {
       background: linear-gradient(#f4ffbd, #ccffcf);
