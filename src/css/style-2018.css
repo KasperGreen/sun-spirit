@@ -45,10 +45,6 @@ html {
   animation: circle 30s infinite;
 }
 
-.svg-menu {
-  will-change: auto;
-}
-
 .svg-to1 {
   -moz-transform-origin: 7.8% 49.8%;
   transform-origin: 7.8% 49.8%;
