@@ -38,6 +38,7 @@
   }
 
   &-artist {
+    background: center center;
     background-size: cover;
     &-title {
       display: block;
@@ -47,16 +48,28 @@
       font-size: 18px;
       font-weight: bold;
       color: white;
+      text-decoration: none !important;
       white-space: nowrap;
+      &:hover, &:focus {
+        color: white;
+        background: rgba(19, 48, 17, 0.85);
+      }
       &-active {
         background: rgba(255, 255, 255, 0.90);
         color: #111;
+        &:hover {
+          + div {
+            opacity: 0;
+          }
+        }
       }
     }
     &-text {
       padding: .42em 1.42em  5em 1.42em;
       background: rgba(255, 255, 255, 0.8);
       position: relative;
+      opacity: 1;
+      transition: .42s ease-out;
     }
     &-sound_cloud {
       background: linear-gradient(#f4ffbd, #ccffcf);

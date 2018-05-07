@@ -27,7 +27,6 @@ export default class LineupNavListArtist extends Component {
       >
         <NavLink
           to={url_left_side + url_path}
-          activeStyle={{pointerEvents: 'none'}}
           className={classNames(
             'LineupNavList-artist-title',
             {
