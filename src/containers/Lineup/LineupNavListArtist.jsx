@@ -3,6 +3,7 @@ import './Lineup.css'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { NavLink } from 'react-router-dom'
+import music_lang from './data/music_lang'
 
 export default class LineupNavListArtist extends Component {
 
@@ -14,7 +15,9 @@ export default class LineupNavListArtist extends Component {
         text,
         title,
         url_left_side,
-        url_path
+        url_path,
+        sound_cloud_url,
+        lang
       }
     } = this
     return (
@@ -37,6 +40,19 @@ export default class LineupNavListArtist extends Component {
         {active &&
         <div className='LineupNavList-artist-text'>
           {text}
+
+          {sound_cloud_url &&
+          <div className='LineupNavList-artist-sound_cloud'>
+            <a
+              className='LineupNavList-artist-sound_cloud-link'
+              href={sound_cloud_url}
+              target='_blank'
+              rel="noopener noreferrer"
+            >
+              {music_lang.page_on[lang]} SoundCloud.com
+            </a>
+          </div>
+          }
         </div>
         }
       </div>

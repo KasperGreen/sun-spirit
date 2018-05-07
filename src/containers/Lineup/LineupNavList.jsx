@@ -35,7 +35,8 @@ export default class LineupNavList extends Component {
                 <LineupNavListArtist {...{
                   ...artist,
                   url_left_side,
-                  active: artist.url_path === active_artist_name
+                  active: artist.url_path === active_artist_name,
+                  lang
                 }} />
               </li>
             )

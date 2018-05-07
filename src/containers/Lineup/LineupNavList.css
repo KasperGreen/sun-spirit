@@ -44,8 +44,35 @@
       }
     }
     &-text {
-      padding: .42em 1.42em 1.42em;
+      padding: .42em 1.42em  5em 1.42em;
       background: rgba(255, 255, 255, 0.8);
+      position: relative;
+    }
+    &-sound_cloud {
+      background: linear-gradient(#f4ffbd, #ccffcf);
+      position: absolute;
+      bottom: 1em;
+      right: 0;
+      border-radius: 4px 0 0 4px;
+      box-shadow: 0 0 2px #333;
+      &:hover {
+        box-shadow: 0 0 4px rgba(93, 46, 0, 0.86);
+      }
+      &-link {
+        color: rgba(17, 17, 17, 0.96) !important;
+        font-weight: bold;
+        font-size: 1em;
+        line-height: 2em;
+        padding: 0 2em 0 4em;
+        background: url(./images/sound_cloud_logo.svg) 15px center no-repeat;
+        background-size: contain;
+        text-decoration: none !important;
+        @media (--tablet) {
+          font-size: .8em;
+          line-height: 1.42em;
+        }
+      }
     }
   }
+
 }

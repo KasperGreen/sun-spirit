@@ -8,5 +8,9 @@ export default {
   page_title: {
     [LANG_RU]: 'Музыкальные Сцены',
     [LANG_EN]: 'Music Stages'
+  },
+  page_on: {
+    [LANG_RU]: 'Страница на',
+    [LANG_EN]: 'Page on'
   }
 }
