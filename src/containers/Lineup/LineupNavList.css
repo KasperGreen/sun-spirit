@@ -72,7 +72,7 @@
       background: rgba(255, 255, 255, 0.95);
       position: relative;
       opacity: 1;
-      transition: .42s ease-out;
+      transition: .82s ease-out;
     }
     &-sound_cloud {
       background: linear-gradient(#f4ffbd, #ccffcf);
