@@ -121,4 +121,10 @@ export default class Player extends Component {
     )
   }
 
+  shouldComponentUpdate (nextProps, nextState, nextContext) {
+    if (typeof document.hidden !== 'undefined') {
+      if (document.hidden) return false
+    }
+  }
+
 }
