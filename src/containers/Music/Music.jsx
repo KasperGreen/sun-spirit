@@ -53,7 +53,6 @@ export default class Music extends Component {
   }
 
   setPlay = (playing) => {
-    console.log(' → ', playing, ' ← playing | ')
 
     this.setState(
       {

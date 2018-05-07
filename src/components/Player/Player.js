@@ -122,9 +122,12 @@ export default class Player extends Component {
   }
 
   shouldComponentUpdate (nextProps, nextState, nextContext) {
+
     if (typeof document.hidden !== 'undefined') {
-      if (document.hidden) return false
+      if (document.hidden && nextProps.playing) return false
     }
+
+    return true
   }
 
 }
