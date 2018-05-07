@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './Lineup.css'
 import PropTypes from 'prop-types'
 import AppContext from 'context/AppContext'
@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet'
 import music_lang from './data/music_lang'
 import stages from './data/stages_lang'
 
-export default class Lineup extends Component {
+export default class Lineup extends PureComponent {
 
   render () {
     const {

@@ -32,12 +32,14 @@ export default class LineupNavList extends Component {
                   <title>{artist.title} — {stages[stage].title[lang]}</title>
                 </Helmet>
                 }
-                <LineupNavListArtist {...{
-                  ...artist,
-                  url_left_side,
-                  active: artist.url_path === active_artist_name,
-                  lang
-                }} />
+                <LineupNavListArtist
+                  key={stage + '_' + artist.url_path}
+                  {...{
+                    ...artist,
+                    url_left_side,
+                    active: artist.url_path === active_artist_name,
+                    lang
+                  }} />
               </li>
             )
           })}

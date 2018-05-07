@@ -4,6 +4,7 @@ import Lineup from 'containers/Lineup'
 import PageWrapper from 'components/PageWrapper'
 import circle_image from './images/circle_one2.png'
 import classNames from 'classnames'
+
 export default class Music extends Component {
 
   state = {
@@ -27,27 +28,33 @@ export default class Music extends Component {
       <PageWrapper>
         <div className='Music'>
           <div className='Music-circle-wrapper'>
-            <div className={classNames(
-              "circle right-svg-circle",
-              {
-                'Music-circle-paused': !playing
-              }
-            )}>
+            <div
+              className={classNames(
+                'circle right-svg-circle',
+                {
+                  'Music-circle-paused': !playing
+                }
+              )}
+            >
               <img src={circle_image} alt="SUN SPIRIT forms" />
             </div>
           </div>
-          <Lineup {...{
-            url_left_side: '/music/' + stage + '/',
-            stage,
-            artist,
-            setPlay
-          }} />
+          <Lineup
+            key={stage}
+            {...{
+              url_left_side: '/music/' + stage + '/',
+              stage,
+              artist,
+              setPlay
+            }} />
         </div>
       </PageWrapper>
     )
   }
 
   setPlay = (playing) => {
+    console.log(' → ', playing, ' ← playing | ')
+
     this.setState(
       {
         ...this.state,

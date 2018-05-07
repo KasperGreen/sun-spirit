@@ -17,7 +17,7 @@ export default class NoosphereLessons extends Component {
           {lessons.map((lesson, key) => {
             return (
               <li
-                key={key}
+                key={lesson.url_path}
               >
                 <NoosphereLessonsLesson {...{...lesson, active_url_path}} />
               </li>
