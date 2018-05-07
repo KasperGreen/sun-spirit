@@ -30,7 +30,7 @@ export default {
       <ul>
         <li>Sevastopol, 33&nbsp;km;</li>
         <li>Simferopol, 56&nbsp;km;</li>
-        <li>Bakhchisaray, 16&nbsp;rm;</li>
+        <li>Bakhchisaray, 16&nbsp;km;</li>
       </ul>
     </div>,
   }

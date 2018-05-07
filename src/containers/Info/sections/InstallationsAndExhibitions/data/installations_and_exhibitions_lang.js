@@ -8,13 +8,13 @@ export default {
         в&nbsp;себе свои уникальные образы, заложенные их&nbsp;идеологами.</p>
       <p>Здесь театрализованные шоу, концептуальные постановки,
         спонтанные и&nbsp;отточенные представления мастеров мистерий будут удивлять гостей то&nbsp;появляясь,
-        то&nbsp;исчезая на&nbsp;просторах фестиваля, каждый раз преподнося новые образы и&nbsp;движения вниманию зрителя.</p></div>,
+        то&nbsp;исчезая на&nbsp;просторах фестиваля, каждый раз преподнося новые образы и&nbsp;движения вниманию
+        зрителя.</p></div>,
     [LANG_EN]: <div><h4>The festival is&nbsp;the right place for creative self realization!</h4>
-      <p>Sun spirit Festival is&nbsp;a&nbsp;big art installation, decorative elements of&nbsp;which convey unique images brought by
+      <p>Sun spirit Festival is&nbsp;a&nbsp;big art installation, decorative elements of&nbsp;which convey unique images
+        brought by
         visionary artists. </p>
-      <p>Concept performances, theatrical shows, spontaneous and well-prepaired shows by&nbsp;masters of&nbsp;mystery will
-        surprise you, appearing and vanishing somewhere at&nbsp;the Festival. Every time they will bring new images and
-        motions to&nbsp;your attention</p></div>
+    </div>
   },
   right: {
     [LANG_RU]: <div>
@@ -23,7 +23,9 @@ export default {
         фестиваля&nbsp;&mdash; &laquo;ЕДИНЕНИЕ&raquo;.</p>
       <p>Здесь художники демонстрируют свое творчество, творят в&nbsp;режиме реального времен,
         показывая публике живой процесс рождения картин.</p></div>,
-    [LANG_EN]: <div>Здесь художники демонстрируют свое творчество, творят в&nbsp;режиме реального времен,
-      показывая публике живой процесс рождения картин.</div>
+    [LANG_EN]: <div><p>Concept performances, theatrical shows, spontaneous and well-prepaired shows by&nbsp;masters
+      of&nbsp;mystery will
+      surprise you, appearing and vanishing somewhere at&nbsp;the Festival. Every time they will bring new images and
+      motions to&nbsp;your attention</p></div>
   }
 }

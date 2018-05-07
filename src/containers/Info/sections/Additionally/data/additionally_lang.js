@@ -23,7 +23,7 @@ export default {
         чистого питания гостей фестиваля и&nbsp;местных товаров ремесла.</p>
     </div>,
     [LANG_EN]: <div>
-      <h4>Эко-туризм</h4>
+      <h4>Eco tourism</h4>
       <br />
 
       <p>The festival spreads the message of&nbsp;interaction with nature and contemplating&nbsp;it, not affecting its
