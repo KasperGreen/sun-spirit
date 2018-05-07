@@ -11,6 +11,9 @@
       top: 0;
       left: 0;
       filter: invert(100%);
+      .circle {
+        transition-timing-function: linear;
+      }
     }
     &-paused {
       animation-play-state: paused;

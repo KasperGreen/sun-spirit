@@ -40,11 +40,12 @@ html {
 }
 
 .circle {
+  will-change: transform;
   -webkit-animation: circle 30s infinite;
   animation: circle 30s infinite;
 }
 
-.svg-menu  {
+.svg-menu {
   will-change: auto;
 }
 
@@ -96,8 +97,6 @@ body {
   position: relative;
   margin: 0px auto;
 }
-
-
 
 .section {
   width: 100%;
@@ -201,6 +200,7 @@ a, a:hover {
 .datename .container {
   padding: 140px 0px;
 }
+
 .atmosphere, .biosphere {
   padding-bottom: 46px;
 }
@@ -322,7 +322,6 @@ a, a:hover {
 }
 
 /*хэдлайнер*/
-
 
 /**/
 
