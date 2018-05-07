@@ -18,29 +18,39 @@ export default class LineupNavList extends Component {
         <ul>
           {lineup_list[stage].map((artist, key) => {
             return (
-              <li
-                key={key}
-                className={classNames(
-                  'LineupNavList-li',
-                  {
-                    'LineupNavList-li-active': artist.url_path === active_artist_name
+              [
+                <li
+                  key={key}
+                  className={classNames(
+                    'LineupNavList-li',
+                    {
+                      'LineupNavList-li-active': artist.url_path === active_artist_name
+                    }
+                  )}
+                >
+                  {artist.url_path === active_artist_name &&
+                  <Helmet>
+                    <title>{artist.title} — {stages[stage].title[lang]}</title>
+                  </Helmet>
                   }
-                )}
-              >
-                {artist.url_path === active_artist_name &&
-                <Helmet>
-                  <title>{artist.title} — {stages[stage].title[lang]}</title>
-                </Helmet>
-                }
-                <LineupNavListArtist
-                  key={stage + '_' + artist.url_path}
-                  {...{
-                    ...artist,
-                    url_left_side,
-                    active: artist.url_path === active_artist_name,
-                    lang
-                  }} />
-              </li>
+                  <LineupNavListArtist
+                    key={stage + '_' + artist.url_path}
+                    {...{
+                      ...artist,
+                      url_left_side,
+                      active: artist.url_path === active_artist_name,
+                      lang
+                    }} />
+                </li>,
+                ...[
+                  artist.url_path === active_artist_name
+                  && <li className='LineupNavList-li LineupNavList-li-active-mark'>
+                    <div className='LineupNavList-li-active-mark-inner'>
+                      {artist.title}
+                    </div>
+                  </li>
+                ]
+              ]
             )
           })}
         </ul>

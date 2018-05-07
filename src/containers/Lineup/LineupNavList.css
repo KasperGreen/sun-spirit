@@ -24,6 +24,16 @@
     order: 1;
     &-active {
       order: 0;
+      &-mark {
+        order: 1;
+        display: block;
+        &-inner {
+          padding: .42em 1em;
+          font-size: 18px;
+          font-weight: bold;
+          background: #fbfbfb;
+        }
+      }
     }
   }
 

@@ -1,6 +1,6 @@
 import fest2018_kalya_eve from '../images/artists/fest2018_kalya_eve.jpg'
 import fest2018_merkaba01 from '../images/artists/fest2018_merkaba01.jpg'
-import fest2018_martin_nonstatic from '../images/artists/fest2018_martin_nonstatic.jpg'
+import fest2018_martin_nonstatic from '../images/artists/martin_nonstatic.jpg'
 import Slackbaba_Live_20181 from '../images/artists/Slackbaba_Live_2018-1.jpg'
 import l8cQ7OAdswg from '../images/artists/l8cQ7OAdswg.jpg'
 import fest2018_DREAMSTALKER from '../images/artists/fest2018_DREAMSTALKER.jpg'
