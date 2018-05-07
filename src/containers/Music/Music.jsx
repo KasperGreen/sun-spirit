@@ -3,17 +3,57 @@ import './Music.css'
 import Lineup from 'containers/Lineup'
 import PageWrapper from 'components/PageWrapper'
 import circle_image from './images/circle_one2.png'
+import classNames from 'classnames'
 export default class Music extends Component {
 
-  componentWillMount () {
+  state = {
+    playing: false
+  }
+
+  render () {
     const {
       props: {
         match: {
-          params: {stage}
+          params: {artist, stage}
         }
-      }
+      },
+      state: {
+        playing
+      },
+      setPlay
     } = this
-    if(!stage) window.scrollTo(0,0)
+
+    return (
+      <PageWrapper>
+        <div className='Music'>
+          <div className='Music-circle-wrapper'>
+            <div className={classNames(
+              "circle right-svg-circle",
+              {
+                'Music-circle-paused': !playing
+              }
+            )}>
+              <img src={circle_image} alt="SUN SPIRIT forms" />
+            </div>
+          </div>
+          <Lineup {...{
+            url_left_side: '/music/' + stage + '/',
+            stage,
+            artist,
+            setPlay
+          }} />
+        </div>
+      </PageWrapper>
+    )
+  }
+
+  setPlay = (playing) => {
+    this.setState(
+      {
+        ...this.state,
+        playing
+      }
+    )
   }
 
   componentDidUpdate (prevProps, prevState, prevContext) {
@@ -24,33 +64,17 @@ export default class Music extends Component {
         }
       }
     } = this
-    if(!stage) window.scrollTo(0,0)
+    if (!stage) window.scrollTo(0, 0)
   }
 
-  render () {
+  componentWillMount () {
     const {
       props: {
         match: {
-          params: {artist, stage}
+          params: {stage}
         }
       }
     } = this
-
-    return (
-      <PageWrapper>
-        <div className='Music'>
-          <div className='Music-circle-wrapper'>
-            <div className="circle right-svg-circle">
-              <img src={circle_image} alt="SUN SPIRIT forms" />
-            </div>
-          </div>
-          <Lineup {...{
-            url_left_side: '/music/' + stage + '/',
-            stage,
-            artist
-          }} />
-        </div>
-      </PageWrapper>
-    )
+    if (!stage) window.scrollTo(0, 0)
   }
 }

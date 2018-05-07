@@ -15,7 +15,8 @@ export default class LineupPlayer extends Component {
         props: {
           lang,
           router_artist_url_path,
-          stage
+          stage,
+          setPlay
         },
         getSoundCloudUrl
       } = this,
@@ -32,6 +33,7 @@ export default class LineupPlayer extends Component {
              key={router_artist_url_path}
              clientId={clientId}
              resolveUrl={sound_cloud_url}
+             {...{setPlay}}
            />
            : <LineupNotRepresentedOnSoundCloud />
            : <LineupStageInfo>

@@ -14,7 +14,7 @@ export default class Lineup extends Component {
 
   render () {
     const {
-      props: {url_left_side, stage, artist: router_artist_url_path},
+      props: {url_left_side, stage, artist: router_artist_url_path, setPlay},
     } = this
     return (
       <AppContext>
@@ -33,7 +33,7 @@ export default class Lineup extends Component {
                  <div className='Lineup-wrapper container'>
                    <LineupNavStages {...{lang}} active_stage_name={stage} />
                    <LineupNavList key={stage} {...{stage, lang, url_left_side}} active_artist_name={router_artist_url_path} />
-                   <LineupPlayer key={router_artist_url_path} {...{lang, router_artist_url_path, stage}} />
+                   <LineupPlayer key={router_artist_url_path} {...{lang, router_artist_url_path, stage, setPlay}} />
                  </div>
                  : <LineupStageSelect {...{lang}} />
                 }

@@ -57,12 +57,17 @@ export default class Player extends Component {
         playlist,
         playing,
         currentTime,
-        duration
+        duration,
+        setPlay
       },
       state: {
         activeIndex
       }
     } = this
+
+    if (playing !== prevProps.playing) {
+      setPlay(playing)
+    }
     if (currentTime === duration && !playing && prevProps.playing) {
       this.playTrackAtIndex(
         activeIndex === playlist.tracks.length - 1
@@ -70,6 +75,15 @@ export default class Player extends Component {
         : activeIndex + 1
       )
     }
+  }
+
+  componentWillUnmount () {
+    const {
+      props: {
+        setPlay
+      }
+    } = this
+    setPlay(false)
   }
 
   playTrackAtIndex (playlistIndex) {

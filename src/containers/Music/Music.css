@@ -12,5 +12,8 @@
       left: 0;
       filter: invert(100%);
     }
+    &-paused {
+      animation-play-state: paused;
+    }
   }
 }
