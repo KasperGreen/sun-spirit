@@ -330,6 +330,9 @@ export default class LandingSVGMenu extends Component {
     _.each(this.svg_circles, (circle, key) => {
       const interval_timeout = Math.floor(Math.random() * 5000) + 3000
       this.intervals[key] = setInterval(() => {
+        if (typeof document.hidden !== 'undefined') {
+          if (document.hidden) return false
+        }
         circle.current.classList.add('active')
         if (_.get(this.timeouts, key)) clearTimeout(this.timeouts[key])
         this.timeouts[key] = setTimeout(() => {

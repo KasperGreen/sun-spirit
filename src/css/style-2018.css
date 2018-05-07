@@ -50,6 +50,7 @@ html {
   transform-origin: 7.8% 49.8%;
   -webkit-animation: circle 5s infinite;
   animation: circle 5s infinite;
+  will-change: transform;
 }
 
 .svg-to2 {
@@ -57,6 +58,8 @@ html {
   transform-origin: 25.8% 49.8%;
   -webkit-animation: circle 10s infinite;
   animation: circle 10s infinite;
+  will-change: transform;
+
 }
 
 .svg-to3 {
@@ -64,6 +67,8 @@ html {
   transform-origin: 92.3% 49.8%;
   -webkit-animation: circle 7s infinite;
   animation: circle 7s infinite;
+  will-change: transform;
+
 }
 
 .svg-to4 {
@@ -74,6 +79,8 @@ html {
   transform-origin: 74% 49.8%;
   -webkit-animation: circle 9s infinite;
   animation: circle 9s infinite;
+  will-change: transform;
+
 }
 
 .svg-to5 {
@@ -533,10 +540,13 @@ div:focus {
   outline: none;
 }
 
-.svg-hover:hover, .svg-hover.active {
-  fill: #fac66e;
+.svg-hover {
+  will-change: fill;
   cursor: pointer;
   transition: 1s;
+}
+.svg-hover:hover, .svg-hover.active {
+  fill: #fac66e;
 }
 
 .svg-menu, .header .container {
