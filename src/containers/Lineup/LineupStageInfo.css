@@ -17,7 +17,7 @@
   &-inner {
     position: relative;
     z-index: 2;
-    background: rgba(255, 252, 211, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 1em;
     padding: 1.42em;
     font-size: 1.2em;
