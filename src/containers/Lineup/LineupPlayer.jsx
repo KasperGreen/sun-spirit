@@ -5,7 +5,7 @@ import Player from 'components/Player/Player'
 import * as stages_data from './data/lineup_list'
 import LineupNotRepresentedOnSoundCloud from 'containers/Lineup/LineupNotRepresentedOnSoundCloud'
 import LineupStageInfo from 'containers/Lineup/LineupStageInfo'
-import stages from './data/stages_lang'
+
 const clientId = 'ca1f6b04464964bb9ed82eaa129f5cc7'
 
 export default class LineupPlayer extends Component {
@@ -36,9 +36,7 @@ export default class LineupPlayer extends Component {
              {...{setPlay}}
            />
            : <LineupNotRepresentedOnSoundCloud />
-           : <LineupStageInfo>
-             {stages[stage].description[lang]}
-           </LineupStageInfo>
+           : <LineupStageInfo {...{stage, lang}} />
           }
         </div>
       </div>
