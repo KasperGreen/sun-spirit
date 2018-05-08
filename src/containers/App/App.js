@@ -8,7 +8,7 @@ import 'css/style-320-2018.css'
 import 'moment/locale/ru'
 import Moment from 'react-moment'
 import About from 'containers/About'
-import { DEFAULT_LANG } from 'constants/LANG'
+import { DEFAULT_LANG, LANG_EN, LANG_RU } from 'constants/LANG'
 import AppContext from 'context/AppContext'
 import Headliners from 'containers/Headliners'
 import Music from 'containers/Music'
@@ -48,6 +48,22 @@ class App extends Component {
               <Route path={'/info/:section?'} component={Info} />
               <Route path={'/noosphere/:lesson?'} component={Noosphere} />
               <Route path={'/music/:stage?/:artist?'} component={Music} />
+              <Route
+                path={'/english'} render={() => {
+                setLang(LANG_EN)
+                return (
+                  <Redirect to={'/'} />
+                )
+              }}
+              />
+              <Route
+                path={'/russian'} render={() => {
+                setLang(LANG_RU)
+                return (
+                  <Redirect to={'/'} />
+                )
+              }}
+              />
               <Redirect to={'/'} />
             </Switch>
             <AppUpdateNotifier />
