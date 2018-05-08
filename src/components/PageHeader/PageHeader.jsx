@@ -73,7 +73,7 @@ export default class PageHeader extends Component {
                 </div>
               </div>
               {show_price_rising_notifier &&
-              <BuyTicketCounter {...{hideNotifier}} />
+              <BuyTicketCounter {...{hideNotifier, lang}} />
               }
             </header>
           )

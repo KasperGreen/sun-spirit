@@ -3,6 +3,7 @@ import Moment from 'react-moment'
 import { LANG_RU } from 'constants/LANG'
 import './BuyTicketCounter.css'
 import PropTypes from 'prop-types'
+import text from './data/buy_ticket_lang'
 
 export default class BuyTicketCounter extends Component {
   render () {
@@ -18,10 +19,10 @@ export default class BuyTicketCounter extends Component {
         <button
           className='BuyTicketCounter-hide'
           onClick={hideNotifier}
-        >✘ Скрыть
+        >✘ {text.hide[lang]}
         </button>
         <div className='container'>
-          Цены на билеты поднимутся через <Moment
+          {text.increase[lang]} <Moment
           onChange={(val) => {
             if (new Date().getTime() >= price_rising_date) this.forceUpdate()
           }}
