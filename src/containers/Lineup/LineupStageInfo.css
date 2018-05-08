@@ -1,6 +1,6 @@
 .LineupStageInfo {
   padding: 1em;
-  background: no-repeat center center;
+  background: no-repeat center center fixed;
   background-size: cover;
   min-height: calc(100vh - 63px);
   box-shadow: inset 0 0 8px #0f260f;
