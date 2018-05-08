@@ -50,15 +50,6 @@ export default class PageHeader extends Component {
                           </li>
                         )
                       })}
-                      <li>
-                        <button
-                          className='PageHeader-menu-item'
-                          onClick={() => {
-                            menuClose()
-                            setLang(lang === LANG_RU ? LANG_EN : LANG_RU)
-                          }}
-                        >{lang === LANG_RU ? 'ENG' : 'РУС'}</button>
-                      </li>
                     </ul>
                   </nav>
                   <div className="PageHeader-buy_button-wrapper">
@@ -69,7 +60,25 @@ export default class PageHeader extends Component {
                     >{text.buy_ticket_button[lang]}
                     </button>
                   </div>
-                  <div id="mobile_nav_icon" onClick={menuToggle} />
+                  <div className='PageHeader-change_lang_button-wrapper'>
+                    <button
+                      title={lang === LANG_RU ? 'Change language to english' : 'Изменить язык на русский'}
+                      className={
+                        classNames(
+                          'PageHeader-change_lang_button',
+                          {
+                            'PageHeader-change_lang_button-en': lang === LANG_RU,
+                            'PageHeader-change_lang_button-ru': lang === LANG_EN
+                          }
+                        )
+                      }
+                      onClick={() => {
+                        menuClose()
+                        setLang(lang === LANG_EN ? LANG_RU : LANG_EN)
+                      }}
+                    >{lang === LANG_RU ? 'English' : 'Русский'}</button>
+                  </div>
+                  <div className='PageHeader-mobile_nav-icon' id="mobile_nav_icon" onClick={menuToggle} />
                 </div>
               </div>
               {show_price_rising_notifier &&

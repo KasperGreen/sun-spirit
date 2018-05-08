@@ -5,6 +5,29 @@
   top: 0;
   z-index: 100;
   box-shadow: 0 0 4px #000;
+  &-change_lang_button {
+    display: block;
+    background: center center no-repeat;
+    background-size: cover;
+    border: none;
+    color: transparent;
+    font-size: 1px;
+    width: 50px;
+    height: 38px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.75) 0 1px 1px;
+    &-en {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCAzMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iNjAwIj4KPGNsaXBQYXRoIGlkPSJ0Ij4KCTxwYXRoIGQ9Ik0zMCwxNSBoMzAgdjE1IHogdjE1IGgtMzAgeiBoLTMwIHYtMTUgeiB2LTE1IGgzMCB6Ii8+CjwvY2xpcFBhdGg+CjxwYXRoIGQ9Ik0wLDAgdjMwIGg2MCB2LTMwIHoiIGZpbGw9IiMwMDI0N2QiLz4KPHBhdGggZD0iTTAsMCBMNjAsMzAgTTYwLDAgTDAsMzAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSI2Ii8+CjxwYXRoIGQ9Ik0wLDAgTDYwLDMwIE02MCwwIEwwLDMwIiBjbGlwLXBhdGg9InVybCgjdCkiIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI0Ii8+CjxwYXRoIGQ9Ik0zMCwwIHYzMCBNMCwxNSBoNjAiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxMCIvPgo8cGF0aCBkPSJNMzAsMCB2MzAgTTAsMTUgaDYwIiBzdHJva2U9IiNjZjE0MmIiIHN0cm9rZS13aWR0aD0iNiIvPgo8L3N2Zz4K);
+    }
+    &-ru {
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDkgNiIgd2lkdGg9IjkwMCIgaGVpZ2h0PSI2MDAiPjxyZWN0IGZpbGw9IiNmZmYiIHdpZHRoPSI5IiBoZWlnaHQ9IjMiLz48cmVjdCBmaWxsPSIjZDUyYjFlIiB5PSIzIiB3aWR0aD0iOSIgaGVpZ2h0PSIzIi8+PHJlY3QgZmlsbD0iIzAwMzlhNiIgeT0iMiIgd2lkdGg9IjkiIGhlaWdodD0iMiIvPjwvc3ZnPg==);
+    }
+    &-wrapper {
+      @media (max-width: 330px) {
+        order: 0;
+      }
+    }
+  }
   a {
     display: block;
   }
@@ -121,11 +144,14 @@
       height: 63px;
     }
 
-    @media (max-width: 292px) {
+    @media (max-width: 330px) {
       display: none;
     }
   }
   &-buy_button-wrapper {
+    @media (max-width: 330px) {
+      order: 1;
+    }
     button {
       width: 200px;
       max-width: 100%;
@@ -147,6 +173,13 @@
         line-height: 20px !important;
         padding: 0 6px !important;
         font-size: 12px !important;
+      }
+    }
+  }
+  &-mobile_nav {
+    &-icon {
+      @media (max-width: 330px) {
+        order: 3;
       }
     }
   }
