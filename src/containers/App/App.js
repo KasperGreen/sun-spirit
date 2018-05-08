@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import Main from 'containers/Main'
 import 'css/bootstrap.min.css'
 import 'css/style-2018.css'
@@ -8,7 +8,7 @@ import 'css/style-320-2018.css'
 import 'moment/locale/ru'
 import Moment from 'react-moment'
 import About from 'containers/About'
-import { LANG_RU } from 'constants/LANG'
+import { DEFAULT_LANG } from 'constants/LANG'
 import AppContext from 'context/AppContext'
 import Headliners from 'containers/Headliners'
 import Music from 'containers/Music'
@@ -19,12 +19,13 @@ import _ from 'lodash'
 import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
 import Noosphere from 'containers/Nooshere/Noosphere'
 import Info from 'containers/Info/Info'
+
 Moment.globalLocale = 'ru'
 
 class App extends Component {
 
   state = {
-    lang: window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : LANG_RU
+    lang: window.localStorage.getItem('lang') ? window.localStorage.getItem('lang') : DEFAULT_LANG
   }
 
   render () {
@@ -47,7 +48,7 @@ class App extends Component {
               <Route path={'/info/:section?'} component={Info} />
               <Route path={'/noosphere/:lesson?'} component={Noosphere} />
               <Route path={'/music/:stage?/:artist?'} component={Music} />
-              <Redirect to={'/'}/>
+              <Redirect to={'/'} />
             </Switch>
             <AppUpdateNotifier />
           </div>

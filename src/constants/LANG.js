@@ -1,3 +1,4 @@
 export const
   LANG_RU = 'ru',
-  LANG_EN = 'en'
+  LANG_EN = 'en',
+  DEFAULT_LANG = LANG_EN
