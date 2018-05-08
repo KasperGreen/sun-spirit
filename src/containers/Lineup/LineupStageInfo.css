@@ -23,6 +23,6 @@
     font-size: 1.2em;
   }
   @media (--mobile) {
-    height: auto;
+    min-height: 0;
   }
 }
