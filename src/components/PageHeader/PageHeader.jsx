@@ -55,6 +55,7 @@ export default class PageHeader extends Component {
                   <div className="PageHeader-buy_button-wrapper">
                     <button
                       onClick={showNotifier}
+                      data-tc-lang={lang}
                       data-tc-event="5a490b1e519f7b001fcadde4"
                       data-tc-token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNTliYTVjMTFkMzUyODYwMDFjZjEyMjg0In0.TLXTeZmoOO_SyChB_gGCPAZASyyYjeM8dHY6dph1TW0"
                     >{text.buy_ticket_button[lang]}

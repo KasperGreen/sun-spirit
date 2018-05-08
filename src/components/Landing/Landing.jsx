@@ -18,7 +18,7 @@ export default class Landing extends Component {
                 <title>{text.title[lang]}</title>
               </Helmet>
               <div className="container">
-                <LandingSVGMenu />
+                <LandingSVGMenu {...{lang}} />
                 <div className="dark-orange date-fest">
                   {text.where[lang]}
                 </div>

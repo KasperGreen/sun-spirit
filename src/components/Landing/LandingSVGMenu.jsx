@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom'
+
 @withRouter
 export default class LandingSVGMenu extends Component {
 
   render () {
     const {
-      goToPage
+      goToPage,
+      props: {lang}
     } = this
     return (
       <div className="svg-menu">
@@ -223,6 +225,7 @@ export default class LandingSVGMenu extends Component {
               ref={this.svg_circles.vk}
               fill="#FFFFFF"
               data-tc-event="5a490b1e519f7b001fcadde4"
+              data-tc-lang={lang}
               data-tc-token="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImlzcyI6InRpY2tldHNjbG91ZC5ydSJ9.eyJwIjoiNTliYTVjMTFkMzUyODYwMDFjZjEyMjg0In0.TLXTeZmoOO_SyChB_gGCPAZASyyYjeM8dHY6dph1TW0"
               d="M608.573,170.021c-3.531-6.299-8.623-11.807-15.133-15.888c-7.599-4.763-16.089-6.935-24.478-6.761
 	c-8.357-0.217-16.814,1.896-24.378,6.589c-7.225,4.483-12.695,10.74-16.224,17.897c-3.869,7.019-5.875,15.129-5.407,23.673
