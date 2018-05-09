@@ -8,7 +8,8 @@ export default class NoosphereLessons extends Component {
   render () {
     const {
       props: {
-        active_url_path
+        active_url_path,
+        lang
       }
     } = this
     return (
@@ -19,7 +20,7 @@ export default class NoosphereLessons extends Component {
               <li
                 key={lesson.url_path}
               >
-                <NoosphereLessonsLesson {...{...lesson, active_url_path}} />
+                <NoosphereLessonsLesson {...{...lesson, active_url_path, lang}} />
               </li>
             )
           })}

@@ -168,7 +168,7 @@
       @media (--mobile) {
         width: auto;
       }
-      @media (max-width: 380px) {
+      @media (max-width: 432px) {
         height: auto !important;
         line-height: 20px !important;
         padding: 0 6px !important;

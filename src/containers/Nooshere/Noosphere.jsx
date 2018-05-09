@@ -38,7 +38,7 @@ export default class Noosphere extends Component {
                   <PageTitle>
                     {text.title[lang]}
                   </PageTitle>
-                  <NoosphereLessons {...{active_url_path: lesson}} />
+                  <NoosphereLessons {...{active_url_path: lesson, lang}} />
                 </div>
               </div>
             )

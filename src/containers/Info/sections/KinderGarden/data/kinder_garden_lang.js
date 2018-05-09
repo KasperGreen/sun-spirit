@@ -33,10 +33,8 @@ export default {
         kid is
         going to&nbsp;be&nbsp;rich in&nbsp;physical, creative and intellectual activities.
       </p>
-      <p>Программа будет проходить на&nbsp;территории &laquo;KINDER SPACE&raquo; в&nbsp;течении всего дня, каждый день
-        будет посвящён
-        развитию ребенка физически, творчески и&nbsp;интеллектуально. Вы&nbsp;всегда можете оставить своего самого
-        маленького ребёнка под присмотр профессиональной няни.</p>
+      <p>The program will run during daytime at&nbsp;the territory of&nbsp;&laquo;KINDER SPACE&raquo;. You&rsquo;ll
+        be&nbsp;able to&nbsp;leave even the smallest child under care of&nbsp;a&nbsp;professional babysitter.</p>
     </div>
   },
   right: {
@@ -67,6 +65,6 @@ export default {
         <li>Cartoooons!</li>
       </ul>
       <p></p>
-      <p><b>Работа площадки с&nbsp;10.00 до&nbsp;24.00 по&nbsp;расписанию.</b></p></div>
+      <p><b>The working hours are 10.00-24.00 according to&nbsp;the schedule.</b></p></div>
   }
 }

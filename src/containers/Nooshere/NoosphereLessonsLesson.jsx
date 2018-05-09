@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import noosphere_lang from './data/noosphere_lang'
 
 export default class NoosphereLessonsLesson extends Component {
   render () {
     const {
       props: {
-        image, text, title, url_path, active_url_path
+        image, text, title, url_path, active_url_path, lang
       },
       scrollToMe
     } = this
@@ -23,14 +24,14 @@ export default class NoosphereLessonsLesson extends Component {
         >
           {active_url_path === url_path &&
           <Helmet>
-            <title>{title} в Ноосфере фестиваля Sun Spirit</title>
+            <title>{title[lang]} {noosphere_lang.in_noosphere[lang]}</title>
           </Helmet>
           }
           <div className='NoosphereLessons-lesson-text'>
-            {text}
+            {text[lang]}
           </div>
           <div className='NoosphereLessons-lesson-title'>
-            {title}
+            {title[lang]}
           </div>
         </NavLink>
       </div>
@@ -61,9 +62,9 @@ export default class NoosphereLessonsLesson extends Component {
   }
 
   static propTypes = {
-    title: PropTypes.string,
+    title: PropTypes.object,
     image: PropTypes.string,
-    text: PropTypes.string,
+    text: PropTypes.object,
     active_url_path: PropTypes.string,
     url_path: PropTypes.string
   }
