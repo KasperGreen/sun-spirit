@@ -34,7 +34,11 @@ export default class LineupNavListArtist extends Component {
             }
           )}
         >
-          {title}
+          <div className='LineupNavList-artist-title-inner-wrapper'>
+            <div className='LineupNavList-artist-title-inner'>
+              {title}
+            </div>
+          </div>
         </NavLink>
         {active &&
         <div className='LineupNavList-artist-text'>

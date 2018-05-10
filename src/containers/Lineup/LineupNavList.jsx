@@ -44,7 +44,7 @@ export default class LineupNavList extends Component {
                 </li>,
                 ...[
                   artist.url_path === active_artist_name
-                  && <li className='LineupNavList-li LineupNavList-li-active-mark'>
+                  && <li className='LineupNavList-li LineupNavList-li-active-mark' key={artist.url_path+'_active'}>
                     <div className='LineupNavList-li-active-mark-inner'>
                       {artist.title}
                     </div>

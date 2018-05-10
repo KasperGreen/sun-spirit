@@ -45,11 +45,18 @@
       cursor: pointer;
       background: rgba(0, 0, 0, 0.85);
       padding: .42em 1em;
-      font-size: 18px;
       font-weight: bold;
       color: white;
       text-decoration: none !important;
       white-space: nowrap;
+      &-inner {
+        font-size: 18px;
+        &-wrapper {
+          font-size: 16px;
+          max-width: 32em;
+          margin: 0 auto;
+        }
+      }
       &:hover, &:focus, &-active {
         color: white;
         background: rgba(19, 48, 17, 0.85);
@@ -72,6 +79,7 @@
       opacity: 1;
       transition: .64s ease-out;
       &-inner {
+        font-size: 16px;
         margin: 0 auto;
         max-width: 32em;
       }
