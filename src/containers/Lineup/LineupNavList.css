@@ -68,12 +68,15 @@
         &:hover {
           + div {
             opacity: 0;
+            @media (--mobile) {
+              opacity: .9;
+            }
           }
         }
       }
     }
     &-text {
-      padding: 1.42em 1.42em  5em 1.42em;
+      padding: 1.42em 1.42em 5em 1.42em;
       background: rgba(255, 255, 255, 0.95);
       position: relative;
       opacity: 1;
