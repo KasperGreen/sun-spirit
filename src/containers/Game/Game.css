@@ -1,0 +1,24 @@
+.Game {
+  min-height: calc(100vh - 63px);
+  padding: 2em;
+  background: url(../../images/fest2018_top.jpg) center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  &-text {
+    background: rgba(17, 17, 17, 0.91);
+    color: #fefefe;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 1.2em;
+    text-align: center;
+    font-size: 3.2vw;
+    border-radius: 1em;
+    box-shadow: 1px 1px 1em #2a2c2e;
+    white-space: nowrap;
+    @media (--mobile) {
+      font-size: 5.5vw;
+      width: auto;
+    }
+  }
+}

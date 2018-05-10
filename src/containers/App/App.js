@@ -19,6 +19,7 @@ import _ from 'lodash'
 import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
 import Noosphere from 'containers/Nooshere/Noosphere'
 import Info from 'containers/Info/Info'
+import Game from 'containers/Game/Game'
 
 Moment.globalLocale = 'ru'
 
@@ -44,6 +45,7 @@ class App extends Component {
             <Switch>
               <Route path={'/'} exact component={Main} />
               <Route path={'/about_festival'} exact component={About} />
+              <Route path={'/game'} exact component={Game} />
               <Route path={'/headliners'} exact component={Headliners} />
               <Route path={'/info/:section?'} component={Info} />
               <Route path={'/noosphere/:lesson?'} component={Noosphere} />
