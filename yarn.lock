@@ -5850,6 +5850,10 @@ react-soundplayer@^1.0.4:
     prop-types "^15.6.0"
     soundcloud-audio "^1.2.2"
 
+react-yandex-metrika@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/react-yandex-metrika/-/react-yandex-metrika-2.3.0.tgz#959a6a4694ee4d101d554ce1b77fd02d715f1652"
+
 react@^16.3.1:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
