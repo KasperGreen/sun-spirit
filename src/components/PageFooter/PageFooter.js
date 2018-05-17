@@ -24,7 +24,7 @@ export default class PageFooter extends Component {
                     <a href="/"><img src={logo_grey} alt={'logo'} className="logomini" /></a>
                   </div>
                   <div className="col-left">
-                    © 2017 Sun Spirit Group <br />
+                    © 2017 Sun Spirit Group <br />
                     {text.organization_name[lang]}<br />
                     {text.psrn[lang]} 1179204004165<br />
                     {text.inn[lang]} 9203542238<br />

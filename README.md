@@ -1,2 +1,2 @@
 # sun-spirit
-Sun Spirit Festival Vol. 2 
+Sun Spirit Festival Vol. 2 

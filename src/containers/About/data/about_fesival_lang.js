@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom'
 
 export default {
   title: {
-    [LANG_RU]: 'О фестивале Sun Spirit',
-    [LANG_EN]: 'About Festival Sun Spirit',
+    [LANG_RU]: 'О фестивале Sun Spirit',
+    [LANG_EN]: 'About Festival Sun Spirit',
   },
   about_festival: {
     [LANG_RU]: <div>
-      <p><b>Sun Spirit Festival 2018</b>&nbsp;&mdash; это единое творческое пространство, наполненное гармонией и
+      <p><b>Sun Spirit Festival 2018</b>&nbsp;&mdash; это единое творческое пространство, наполненное гармонией и
         спокойствием, создающее уникальные возможности для самовыражения каждого гостя и&nbsp;каждого участника
         феерического действа. </p> <p>
       <b>Основа нашего Фестиваля это люди:</b> музыканты, художники, перформеры, актеры, мастера йоги, научные
       преподаватели, ремесленники и&nbsp;инженеры. Люди, которые посвятили годы любимому делу, оттачивая свое
       мастерство для того чтобы стать одними из&nbsp;самых лучших в&nbsp;выбранных ими направлениях.</p> <p>
-      <b>Концепция</b> второго интеллектуально-музыкального Фестиваля Sun Spirit&nbsp;&mdash; это расширение и&nbsp;углубление
+      <b>Концепция</b> второго интеллектуально-музыкального Фестиваля Sun Spirit&nbsp;&mdash; это расширение и&nbsp;углубление
       образовательных и&nbsp;развлекательных программ для гостей, повышение разнообразия музыкальных направлений и
       стилей.</p> <p>
       Фестиваль включает в&nbsp;себя <b>четыре основных направления</b>, каждое из&nbsp;которых имеет свое уникальное
@@ -47,7 +47,7 @@ export default {
     </div>,
     [LANG_EN]: <div>
       <p>
-        <strong>Sun Spirit Festival 2018</strong>&nbsp;is a&nbsp;united artistic space filled with harmony and peace, creating
+        <strong>Sun Spirit Festival 2018</strong>&nbsp;is a&nbsp;united artistic space filled with harmony and peace, creating
         unique opportunities
         for self realization of&nbsp;every single visitor and participant of&nbsp;this fairy festival.
       </p>
@@ -58,7 +58,7 @@ export default {
         become one of&nbsp;the best in&nbsp;their business.
       </p>
       <p>
-        <strong>The concept</strong> of&nbsp;the second intellectualy-musical festival Sun Spirit is&nbsp;broadened and expanded
+        <strong>The concept</strong> of&nbsp;the second intellectualy-musical festival Sun Spirit is&nbsp;broadened and expanded
         educational and
         entertaining programs for visitors together with wider variety of&nbsp;musical trends and styles.
       </p>

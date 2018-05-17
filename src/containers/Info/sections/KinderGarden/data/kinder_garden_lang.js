@@ -24,7 +24,7 @@ export default {
       a&nbsp;picturesque music eco festival in
       one of&nbsp;the most breathtaking sights of&nbsp;Russia.
     </p>
-      <p><strong>Sun Spirit</strong> is&nbsp;a&nbsp;family festival uniting the ones who strive for self development and
+      <p><strong>Sun Spirit</strong> is&nbsp;a&nbsp;family festival uniting the ones who strive for self development and
         perfection, leading healthy life style and dancing to&nbsp;beautiful music.
       </p>
       <p>In&nbsp;terms of&nbsp;the festival we&nbsp;will do&nbsp;our best to&nbsp;create safe and comfortable

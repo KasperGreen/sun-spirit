@@ -43,7 +43,7 @@ export default {
         ученые и&nbsp;учителя поделятся с&nbsp;Вами на&nbsp;лекциях и&nbsp;мастер-классах знаниями и&nbsp;опытом,
         интересно расскажут о&nbsp;фундаментальных законах точных и&nbsp;гуманитарных наук.</p>
       <p><b>Здоровье</b></p>
-      <p>Фестиваль Sun Spirit пропагандирует осознанный и&nbsp;здоровый образ жизни.
+      <p>Фестиваль Sun Spirit пропагандирует осознанный и&nbsp;здоровый образ жизни.
         Наша команда мастеров здоровья предложит Вам пройти сеансы массажа,
         оздоровительной гимнастики, спа, покажет и&nbsp;проведет при желании различные практики,
         такие как ходьба по&nbsp;углям, лежание на&nbsp;гвоздях, и&nbsp;многое-многое другое.</p>
@@ -53,7 +53,7 @@ export default {
       <p>Education Interesting lecturers, teachers, handymen, scientists and tutors will share with you their knowledge
         and skills, tell about fundamental laws of&nbsp;science and arts at&nbsp;the lectures and master-classes.</p>
       <p><b>Health</b></p>
-      <p>The festival Sun Spirit encourages conscious and healthy lifestyle. Our team of&nbsp;health specialists
+      <p>The festival Sun Spirit encourages conscious and healthy lifestyle. Our team of&nbsp;health specialists
         will offer you massage sessions, recreational gymnastics and spa, they will show you and conduct different
         practices like firewalk, lying on&nbsp;a&nbsp;bed of&nbsp;nails and what&rsquo;s not.</p>
     </div>
