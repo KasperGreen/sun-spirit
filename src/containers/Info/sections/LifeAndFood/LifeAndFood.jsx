@@ -15,7 +15,7 @@ export default class LifeAndFood extends Component {
     } = this
     return (
       <div className='LifeAndFood'>
-        <p>{text.top[lang]}</p>
+        <div>{text.top[lang]}</div>
         <div className="cols">
           <div className="col_left50">
             {text.left[lang]}
