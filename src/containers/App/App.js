@@ -20,7 +20,8 @@ import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
 import Noosphere from 'containers/Nooshere/Noosphere'
 import Info from 'containers/Info/Info'
 import Game from 'containers/Game/Game'
-import { YMInitializer } from 'react-yandex-metrika'
+import ym, { YMInitializer } from 'react-yandex-metrika'
+import { METRIKA_ID } from 'constants/METRIKA'
 
 Moment.globalLocale = 'ru'
 
@@ -38,13 +39,14 @@ class App extends Component {
       setLang
     } = this
     Moment.globalLocale = lang
+
     return (
       <AppContext.Provider value={{lang, setLang}}>
         <Router>
           <div className="App">
             <YMInitializer
               version="2"
-              accounts={[48904658]}
+              accounts={[METRIKA_ID]}
               options={{
                 clickmap: true,
                 trackLinks: true,
@@ -52,6 +54,14 @@ class App extends Component {
                 webvisor: true,
                 trackHash: true,
               }}
+            />
+            <Route
+              path={'/'} render={({location}) => {
+              if (_.some(window['yaCounter' + METRIKA_ID])) {
+                ym('hit', location.pathname)
+              }
+              return false
+            }}
             />
             <ChangeLangSplashScreen {...{lang}} />
             <Switch>
