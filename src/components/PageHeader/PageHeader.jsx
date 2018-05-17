@@ -8,7 +8,7 @@ import AppContext from 'context/AppContext'
 import text from './data/page_header_lang'
 import { LANG_EN, LANG_RU } from 'constants/LANG'
 import BuyTicketCounter from 'components/BuyTicketCounter/BuyTicketCounter'
-
+import ym from 'react-yandex-metrika'
 export default class PageHeader extends Component {
   state = {
     menu_opened: false,
@@ -116,6 +116,7 @@ export default class PageHeader extends Component {
     this.setState({menu_opened: !menu_opened})
   }
   showNotifier = () => {
+    ym('reachGoal', 'buy_ticket_button')
     this.setState(
       {
         ...this.state,

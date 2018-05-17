@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import _ from 'lodash'
 import { withRouter } from 'react-router-dom'
+import ym from 'react-yandex-metrika'
 
 @withRouter
 export default class LandingSVGMenu extends Component {
@@ -8,7 +9,8 @@ export default class LandingSVGMenu extends Component {
   render () {
     const {
       goToPage,
-      props: {lang}
+      props: {lang},
+      reachBuyButton
     } = this
     return (
       <div className="svg-menu">
@@ -222,7 +224,8 @@ export default class LandingSVGMenu extends Component {
             </g>
             <path
               className="svg-hover"
-              ref={this.svg_circles.vk}
+              onClick={reachBuyButton}
+              ref={this.svg_circles.buy_ticket}
               fill="#FFFFFF"
               data-tc-event="5a490b1e519f7b001fcadde4"
               data-tc-lang={lang}
@@ -326,7 +329,7 @@ export default class LandingSVGMenu extends Component {
     this.svg_circles.about_festival = React.createRef()
     this.svg_circles.biosphere = React.createRef()
     this.svg_circles.tishina = React.createRef()
-    this.svg_circles.vk = React.createRef()
+    this.svg_circles.buy_ticket = React.createRef()
   }
 
   _svgHoverAutoAnimationStart = () => {
@@ -350,6 +353,9 @@ export default class LandingSVGMenu extends Component {
 
   }
   intervals = {}
+  reachBuyButton = () => {
+    ym('reachGoal', 'buy_ticket_button')
+  }
   svg_circles = {}
   timeouts = {lol: false}
 

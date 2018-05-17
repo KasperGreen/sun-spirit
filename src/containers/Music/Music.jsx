@@ -4,6 +4,7 @@ import Lineup from 'containers/Lineup'
 import PageWrapper from 'components/PageWrapper'
 import circle_image from './images/circle_one2.png'
 import classNames from 'classnames'
+import ym from 'react-yandex-metrika'
 
 export default class Music extends Component {
 
@@ -60,6 +61,9 @@ export default class Music extends Component {
         playing
       }
     )
+    if (playing) {
+      ym('reachGoal', 'player_using')
+    }
   }
 
   componentDidUpdate (prevProps, prevState, prevContext) {
