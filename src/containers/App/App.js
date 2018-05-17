@@ -20,7 +20,7 @@ import AppUpdateNotifier from 'containers/App/AppUpdateNotifier'
 import Noosphere from 'containers/Nooshere/Noosphere'
 import Info from 'containers/Info/Info'
 import Game from 'containers/Game/Game'
-
+import { YMInitializer } from 'react-yandex-metrika';
 Moment.globalLocale = 'ru'
 
 class App extends Component {
@@ -41,6 +41,7 @@ class App extends Component {
       <AppContext.Provider value={{lang, setLang}}>
         <Router>
           <div className="App">
+            <YMInitializer accounts={[48904658]} />
             <ChangeLangSplashScreen {...{lang}} />
             <Switch>
               <Route path={'/'} exact component={Main} />
