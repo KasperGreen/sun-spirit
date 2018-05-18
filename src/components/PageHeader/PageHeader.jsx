@@ -9,6 +9,7 @@ import text from './data/page_header_lang'
 import { LANG_EN, LANG_RU } from 'constants/LANG'
 import BuyTicketCounter from 'components/BuyTicketCounter/BuyTicketCounter'
 import ym from 'react-yandex-metrika'
+
 export default class PageHeader extends Component {
   state = {
     menu_opened: false,
@@ -45,7 +46,11 @@ export default class PageHeader extends Component {
                           <li key={key} className='PageHeader-menu-item'>
                             {submenu
                              ? <PageHeaderSubmenu {...{links: submenu, lang, title, to, menuClose}} />
-                             : <NavLink {...{to, onClick: menuClose}}>{title[lang]}</NavLink>
+                             : <NavLink
+                               className='PageHeader-menu-item-link'
+                               {...{to, onClick: menuClose}}>
+                               {title[lang]}
+                             </NavLink>
                             }
                           </li>
                         )

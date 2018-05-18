@@ -86,22 +86,21 @@
   }
   &-menu {
     &-item {
-      padding: 0 12px;
       line-height: 69px;
       white-space: nowrap;
       cursor: pointer;
       position: relative;
       background: none;
       border: none;
-      &:hover, &:focus, &:focus-within {
-        background: #383a3d;
-        .PageHeader-submenu {
-          box-shadow: 0 2px 8px black;
-          @media (min-width: 1021px) {
-            transition: max-height .42s ease-in;
-            max-height: calc(100vh - 96px);
-            opacity: 1;
-          }
+      &-link {
+        padding: 0 12px;
+        &:hover, &:focus, &:focus-within {
+          background: #383a3d;
+        }
+        &.active {
+          color: #111;
+          background: #fefefe;
+          font-weight: bold;
         }
       }
     }
