@@ -11,7 +11,7 @@ export default {
     [LANG_EN]: <div>
       <h4>For transfer your ticket to another person</h4>
       <p>You need:</p>
-      <p>Write to <a href={'mailto:info@sunspiritgroup.ru'}>info@sunspiritgroup.ru</a> for cancel your ticket and other email address for sending new invite.</p>
+      <p>Write to <a href={'mailto:info@sunspiritgroup.ru'}>info@sunspiritgroup.ru</a> for cancel your ticket and other email address for sending new ticket.</p>
     </div>
   }
 }
