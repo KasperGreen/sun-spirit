@@ -1,4 +1,6 @@
 #!/bin/sh
 
-mkdir production
+git pull
+yarn build
+mkdir -p production
 cp -R build/* production/
