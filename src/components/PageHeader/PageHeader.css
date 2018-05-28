@@ -101,6 +101,9 @@
           color: #111;
           background: #fefefe;
           font-weight: bold;
+          &:hover {
+            color: #151;
+          }
         }
       }
     }

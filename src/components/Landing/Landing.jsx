@@ -15,7 +15,7 @@ export default class Landing extends Component {
           return (
             <div className="Landing section header">
               <Helmet>
-                <title>{text.title[lang]}</title>
+                <title>{text.title[lang]} — {text.what[lang]}</title>
               </Helmet>
               <div className="container">
                 <LandingSVGMenu {...{lang}} />

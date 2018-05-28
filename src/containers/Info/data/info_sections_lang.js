@@ -12,6 +12,7 @@ import InstallationsAndExhibitions
   from 'containers/Info/sections/InstallationsAndExhibitions/InstallationsAndExhibitions'
 import KinderGarden from 'containers/Info/sections/KinderGarden/KinderGarden'
 import Additionally from 'containers/Info/sections/Additionally/Additionally'
+import TicketTransfer from 'containers/Info/sections/TicketTransfer/TicketTransfer'
 
 export default {
   place: {
@@ -83,5 +84,13 @@ export default {
       [LANG_EN]: 'Additionally'
     },
     component: <Additionally />
-  }
+  },
+  ticket_transfer: {
+    title: {
+      [LANG_RU]: 'Передача билета',
+      [LANG_EN]: 'Ticket Transfer'
+    },
+    component: <TicketTransfer />
+  },
+
 }
