@@ -3,9 +3,10 @@
 # dependencies
 /node_modules
 
+/production
+
 # testing
 /coverage
-
 /.idea
 
 # production
