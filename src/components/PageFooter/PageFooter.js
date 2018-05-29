@@ -4,6 +4,7 @@ import logo_grey from 'images/logo_grey.svg'
 import icon_fb from 'images/Icon_FB.svg'
 import icon_vk from 'images/Icon_VK.svg'
 import text from './data/page_footer_lang'
+import icon_telegram from 'images/icon_telegram.svg'
 import './PageFooter.css'
 
 export default class PageFooter extends Component {
@@ -24,7 +25,7 @@ export default class PageFooter extends Component {
                     <a href="/"><img src={logo_grey} alt={'logo'} className="logomini" /></a>
                   </div>
                   <div className="col-left">
-                    © 2017 Sun Spirit Group <br />
+                    © 2017 Sun Spirit Group <br />
                     {text.organization_name[lang]}<br />
                     {text.psrn[lang]} 1179204004165<br />
                     {text.inn[lang]} 9203542238<br />
@@ -42,6 +43,9 @@ export default class PageFooter extends Component {
                     </a>
                     <a href="https://vk.com/board133216135" rel="noreferrer noopener" target="_blank">
                       <img src={icon_vk} alt="мы в vk" />
+                    </a>
+                    <a href="https://t.me/joinchat/AX_6w1NHjyzzZSyeOv3Cgg" rel="noreferrer noopener" target="_blank">
+                      <img src={icon_telegram} alt="мы в Telegram" />
                     </a>
                   </div>
                 </div>
