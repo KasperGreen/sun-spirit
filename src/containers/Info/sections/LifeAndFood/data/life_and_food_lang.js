@@ -8,7 +8,7 @@ export default {
       чайные, фреш бар, кофейня, две большие «столовые» с вкуснейшей вегетарианской едой. Приверженцы традиционного
       питания так же будут чувствовать себя комфортно, ведь для них будет трудиться целая кухня эко усадьбы
       «Эски-Кермен». Во время проведения фестиваля будет доступен душ, баня как на территории проведения фестиваля,
-      так и в эко усадьбе «Эски-Кермен».s</div>,
+      так и в эко усадьбе «Эски-Кермен»</div>,
     [LANG_EN]: <div>
       There will be&nbsp;different tea spots, fresh bar, coffee place, two big cafes with delicious vegetarian meals on&nbsp;the
       territory of&nbsp;the festival. Tradional meals will be&nbsp;provided at&nbsp;the caf&eacute; of&nbsp;the farmstead &laquo;Eski-Kermen&raquo;.
