@@ -5,6 +5,11 @@
   .footer-container {
     display: flex;
     justify-content: space-between;
+
+    @media (--tablet) {
+      flex-direction: column;
+    }
+
     > div {
       width: auto;
     }
