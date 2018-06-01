@@ -6,6 +6,7 @@ import icon_vk from 'images/Icon_VK.svg'
 import text from './data/page_footer_lang'
 import icon_telegram from 'images/icon_telegram.svg'
 import './PageFooter.css'
+import { Link } from 'react-router-dom'
 
 export default class PageFooter extends Component {
   render () {
@@ -22,7 +23,7 @@ export default class PageFooter extends Component {
               <div className="container">
                 <div className="footer-container">
                   <div className="logo">
-                    <a href="/"><img src={logo_grey} alt={'logo'} className="logomini" /></a>
+                    <Link to="/"><img src={logo_grey} alt={'logo'} className="logomini" /></Link>
                   </div>
                   <div className="col-left">
                     © 2017 Sun Spirit Group <br />
